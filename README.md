@@ -18,8 +18,11 @@
  * Python 3.5 y Sublime Text 2 
  * Python es un lenguaje muy util para el rapido prototipado de aplicaciones
 
-* **Lenguajes de Marcas**
+* [**Lenguajes de Marcas**](https://github.com/mgustran/DUAL/tree/master/LenguajesDeMarcas)
  * Diseño Adaptativo
  * Diseño Responsivo
  * Uso de HTML5
  * Uso de CSS3
+
+* [**Java y XML**](https://github.com/mgustran/DUAL/tree/master/JavaXML)
+ * Aun en la iniciación

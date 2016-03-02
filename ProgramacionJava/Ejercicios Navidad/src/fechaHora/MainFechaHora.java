@@ -16,7 +16,7 @@ public class MainFechaHora {
 		Fecha testFecha =new Fecha(15,12,1996);
 		int[][]test= {{testFecha.getDia(),15},
 					  {testFecha.getMes(),12},
-					  {testFecha.getAÃ±o(),1996}};
+					  {testFecha.getAño(),1996}};
 		for (int[] caso : test){
 			if (caso[0]==caso[1]){
 				System.out.println("test Getters y Setters PASS");
@@ -45,7 +45,7 @@ public class MainFechaHora {
 		fechaTest.setFecha(5, 5, 1990);
 		int[][]test= {{fechaTest.getDia(),5},
 				  {fechaTest.getMes(),5},
-				  {fechaTest.getAÃ±o(),1990}};
+				  {fechaTest.getAño(),1990}};
 	for (int[] opcion : test){
 		if (opcion[0]==opcion[1]){
 			System.out.println("test del Setter de Fecha PASS");

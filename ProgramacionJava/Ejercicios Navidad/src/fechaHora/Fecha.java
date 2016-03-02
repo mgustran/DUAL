@@ -5,17 +5,17 @@ public class Fecha {
 
 	private int dia = 01;
 	private int mes	= 01;
-	private int aÃ±o	= 1900;
+	private int año	= 1900;
 	int[] diasMes = {31,29,31,30,31,30,31,31,30,31,30,31};
 	String[] letraDelMes = {"E", "F","M","A","M","J","J","A","S","O","N","D"};
 
 	
 	public Fecha(){}
 	
-	public Fecha(int dia, int mes, int aÃ±o){
+	public Fecha(int dia, int mes, int año){
 		this.dia	= dia;
 		this.mes	= mes;
-		this.aÃ±o	= aÃ±o;
+		this.año	= año;
 	}
 
 	public int getDia() {
@@ -58,29 +58,29 @@ public class Fecha {
 		this.mes = mes;
 	}
 
-	public int getAÃ±o() {
-		return aÃ±o;
+	public int getAño() {
+		return año;
 	}
 
-	public void setAÃ±o(int aÃ±o) {
-		this.aÃ±o = aÃ±o;
+	public void setAño(int año) {
+		this.año = año;
 	}
 	
 	
-	public void setFecha(int dia, int mes, int aÃ±o){
+	public void setFecha(int dia, int mes, int año){
 		this.setDia(dia);
 		this.setMes(mes);
-		this.setAÃ±o(aÃ±o);
+		this.setAño(año);
 	}
 	public String getFecha(){
-		String fecha = (Integer.toString(this.getDia()) + "-" + Integer.toString(this.getMes()) + "-" + Integer.toString(this.getAÃ±o()));
+		String fecha = (Integer.toString(this.getDia()) + "-" + Integer.toString(this.getMes()) + "-" + Integer.toString(this.getAño()));
 		return fecha;	
 		}
 	
 	public String getFechaLetra(){
 		String dia = Integer.toString(this.getDia());
-		String aÃ±o = Integer.toString(this.getAÃ±o());
-		String fecha = (dia + "-" + this.getLetraMes() + "-" + aÃ±o);
+		String año = Integer.toString(this.getAño());
+		String fecha = (dia + "-" + this.getLetraMes() + "-" + año);
 		return fecha;	
 		}
 	
@@ -91,29 +91,29 @@ public class Fecha {
 	public void incrementarFecha(int dias){
 		int cantidadDias = this.getDia() + dias;
 		int editMes = -1;
-		int editAÃ±o = 0;
+		int editAño = 0;
 		while(cantidadDias>0){
 			if (cantidadDias < this.getDiasMes()[this.getMes() + editMes]){
-				this.setFecha(cantidadDias, this.getMes()+editMes+1, this.getAÃ±o()+editAÃ±o);
+				this.setFecha(cantidadDias, this.getMes()+editMes+1, this.getAño()+editAño);
 				break;
 			}
 			while(cantidadDias>0){
 				if (cantidadDias < this.getDiasMes()[this.getMes() + editMes]){
-					this.setFecha(cantidadDias, this.getMes()+editMes+1, this.getAÃ±o()+editAÃ±o);
+					this.setFecha(cantidadDias, this.getMes()+editMes+1, this.getAño()+editAño);
 					break;
 				}
 				cantidadDias = cantidadDias - this.getDiasMes()[this.getMes()+editMes]; 
-				if (this.getAÃ±o()+editAÃ±o%4 == 2 && this.getMes()+editMes == 1){
+				if (this.getAño()+ editAño %4 == 2 && this.getMes()+editMes == 1){
 					cantidadDias -= 1;
 				}
 				editMes += 1;
 				if (this.getMes()+editMes == 12){
-					editAÃ±o += 1;
+					editAño += 1;
 					this.setMes(1);
 					editMes = -1;
 				}
 				if (cantidadDias == 0){
-					this.setFecha(this.getDiasMes()[this.getMes()+editMes-1],this.getMes()+editMes,this.getAÃ±o()+editAÃ±o);
+					this.setFecha(this.getDiasMes()[this.getMes()+editMes-1],this.getMes()+editMes,this.getAño()+editAño);
 				}
 				
 			}
