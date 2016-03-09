@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="unqualified"
+	targetNamespace="http://www.edreams.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ed="http://www.edreams.com">
+	
+	<xs:include schemaLocation="eDreams.xsd"></xs:include>
+
+	<xs:complexType name="pasajeros">
+        <xs:all>
+			<xs:element name="adultos" type="ed:adultos"></xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="infantes" type="ed:menores">
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0" name="bebes" type="ed:menores">
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="adultos">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"></xs:minInclusive>
+			<xs:maxInclusive value="9"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="menores">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9]"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

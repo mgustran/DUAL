@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ed:vuelo
+  xmlns:ed="http://www.edreams.com"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.edreams.com  eDreamsIn.xsd">
+
+
+
+
+	<billete>
+	
+		<trayecto>
+			<origen>BCN</origen>
+			<destino>PMI</destino>
+			<soloIda>true</soloIda>
+		</trayecto>
+		
+		<fecha>
+			<salida>2016-12-15</salida>
+			<vuelta>2016-12-20</vuelta>
+		</fecha>
+		
+		<pasajeros>
+			<adultos>3</adultos>
+			<infantes>2</infantes>
+			<bebes>0</bebes>
+		</pasajeros>
+		
+		<tipo>
+			<business/>
+		</tipo>
+
+	</billete>
+	
+</ed:vuelo>
+
+
