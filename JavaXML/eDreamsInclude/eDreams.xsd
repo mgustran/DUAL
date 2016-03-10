@@ -5,6 +5,8 @@
  elementFormDefault="unqualified"
  attributeFormDefault="unqualified">
  
+ <xs:include schemaLocation="eDreams.xsd"></xs:include>
+ 
 	 <xs:element name="vuelo">
 	 	<xs:complexType>
 	 		<xs:sequence>

@@ -5,7 +5,7 @@
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:ed="http://www.edreams.com">
 	
-	<xs:include schemaLocation="eDreams.xsd"></xs:include>
+	
 
 	<xs:complexType name="pasajeros">
         <xs:all>
