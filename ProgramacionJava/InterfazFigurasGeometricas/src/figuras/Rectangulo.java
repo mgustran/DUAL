@@ -3,23 +3,11 @@ package figuras;
 import draw.Drawable;
 
 public class Rectangulo extends FiguraGeometrica implements Drawable {
-
 	private double altura 	= 0d;
 	private double anchura 	= 0d;
-	private String name = "Rectangulo";
-
-	/* Sobrecarga de constructores: utilizo el constructor de la superclase FiguraGeometrica */
-	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public Rectangulo(){
-		super(); /* invocamos al constructor sin parámetro de la superclase FiguraGeometrica */
+		super(); 
 	}
 		
 	public Rectangulo(double altura, double anchura){
@@ -57,11 +45,11 @@ public class Rectangulo extends FiguraGeometrica implements Drawable {
 	}
 	
 	public void draw() {
-		System.out.println(getName() + " (a rectancle) is drawed.");
+		System.out.println(getNombre() + " (a rectancle) is drawed.");
 	}
 	
 	public void applyTheme() {
-		System.out.println(getName() + " theme is applied.");
+		System.out.println(getNombre() + " theme is applied.");
 	}
 
 }
