@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://www.edreams.es"
+ xmlns:ed="http://www.edreams.es"
+ xmlns:wac="http://www.iata.com/wac/"
+ elementFormDefault="unqualified"
+ attributeFormDefault="unqualified">
+ 
+ <xs:import namespace="http://www.iata.com/wac/"
+		schemaLocation="WAC.xsd">
+</xs:import>
+ 
+	 <xs:element name="vuelo">
+	 	<xs:complexType>
+	 		<xs:sequence>
+	 			<xs:element name="billete" type="ed:billete">
+	 			</xs:element>
+	 		</xs:sequence>
+	 	</xs:complexType>
+	 </xs:element>
+ 
+	 <xs:complexType name="billete">
+	 	<xs:sequence>
+	 		<xs:element name="trayecto" type="ed:trayecto"></xs:element>
+	 		<xs:element name="fecha" type="ed:fecha"></xs:element>
+	 		<xs:element name="tipo" type="ed:tipo"></xs:element>
+	 	</xs:sequence>
+	 </xs:complexType>
+ 
+	 <xs:complexType name="trayecto">
+	 	<xs:sequence>
+	 		<xs:element name="origen" type="wac:iata"></xs:element>
+	 		<xs:element name="destino" type="wac:iata"></xs:element>
+	 		<xs:element name="soloIda" type="xs:boolean"></xs:element>
+	 	</xs:sequence>
+	 </xs:complexType>
+ 
+	 <xs:complexType name="fecha">
+	 	<xs:sequence>
+	 		<xs:element name="salida" type="xs:date"></xs:element>
+	 		<xs:element name="vuelta" type="xs:date"></xs:element>
+	 	</xs:sequence>
+	 </xs:complexType>
+ 
+	 <xs:complexType name="tipo">
+	 	<xs:choice>
+	 		<xs:element name="turista">
+	 			<xs:complexType></xs:complexType>
+	 		</xs:element>
+	 		 <xs:element name="business">
+	 			<xs:complexType></xs:complexType>
+	 		</xs:element>
+	 	</xs:choice>
+	 </xs:complexType>
+ 
+	 
+	 
+	
+ 
+ 
+</xs:schema>

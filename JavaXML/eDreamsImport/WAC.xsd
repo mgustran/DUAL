@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.iata.com/wac" 
+	xmlns:wac="http://www.iata.com/wac">
+
+
+	<xs:simpleType name="iata">  <!--  Tipo reutilizado -->
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PMI" /><!-- airport="Palma" country="Spain" -->
+			<xs:enumeration value="AAR" /><!-- airport="Aarhus" country="Denmark" -->
+			<xs:enumeration value="ABD" /><!-- airport="Abadan" country="Iran" -->
+			<xs:enumeration value="AEH" /><!-- airport="Abeche" country="Chad" -->
+			<xs:enumeration value="ABZ" /><!-- airport="Aberdeen" country="United Kingdom" -->
+			<xs:enumeration value="ABR" /><!-- airport="Aberdeen" country="USA" -->
+			<xs:enumeration value="ABJ" /><!-- airport="Abidjan" country="Ivory Coast" -->
+			<xs:enumeration value="ABI" /><!-- airport="Abilene" country="USA" -->
+			<xs:enumeration value="AUH" /><!-- airport="Abu Dhabi" country="UAE" -->
+			<xs:enumeration value="ABV" /><!-- airport="Abuja International" country="Nigeria" -->
+			<xs:enumeration value="AUE" /><!-- airport="Abu Rudeis" country="Egypt" -->
+			<xs:enumeration value="ABS" /><!-- airport="Abu Simbel" country="Egypt" -->
+			<xs:enumeration value="ACA" /><!-- airport="Acapulco" country="Mexico" -->
+			<xs:enumeration value="ACC" /><!-- airport="Accra" country="Ghana" -->
+			<xs:enumeration value="ADA" /><!-- airport="Adana" country="Turkey" -->
+			<xs:enumeration value="ADD" /><!-- airport="Addis Ababa" country="Ethiopia" -->
+			<xs:enumeration value="ADL" /><!-- airport="Adelaide" country="Australia" -->
+			<xs:enumeration value="ADE" /><!-- airport="Aden" country="Yemen" -->
+			<xs:enumeration value="AER" /><!-- airport="Adler/Sochi" country="Russia" -->
+			<xs:enumeration value="AJY" /><!-- airport="Agades" country="Niger" -->
+			<xs:enumeration value="AGA" /><!-- airport="Agadir" country="Morocco" -->
+			<xs:enumeration value="SUM" /><!-- airport="Agana" country="Guam" -->
+			<xs:enumeration value="AGZ" /><!-- airport="Aggeneys" country="South Africa" -->
+			<xs:enumeration value="BQN" /><!-- airport="Aguadilla" country="Puerto Rico" -->
+			<xs:enumeration value="AGU" /><!-- airport="Aguascaliente" country="Mexico" -->
+			<xs:enumeration value="AMD" /><!-- airport="Ahmedabad" country="India" -->
+			<xs:enumeration value="AJA" /><!-- airport="Ajaccio" country="France" -->
+			<xs:enumeration value="AXT" /><!-- airport="Akita" country="Japan" -->
+			<xs:enumeration value="CAK" /><!-- airport="Akron" country="USA" -->
+			<xs:enumeration value="AKT" /><!-- airport="Akrotiri - RAF" country="Cyprus" -->
+			<xs:enumeration value="ADX" /><!-- airport="Aktyubinsk" country="Kazakhstan" -->
+			<xs:enumeration value="AAC" /><!-- airport="Al Arish" country="Egypt" -->
+			<xs:enumeration value="AHU" /><!-- airport="Al Hoceima" country="Morocco" -->
+			<xs:enumeration value="ALH" /><!-- airport="Albany" country="Australia" -->
+			<xs:enumeration value="ABY" /><!-- airport="Albany" country="USA" -->
+			<xs:enumeration value="ALB" /><!-- airport="Albany" country="USA" -->
+			<xs:enumeration value="LBI" /><!-- airport="Albi" country="France" -->
+			<xs:enumeration value="AAL" /><!-- airport="Alborg" country="Denmark" -->
+			<xs:enumeration value="ABQ" /><!-- airport="Albuquerque" country="USA" -->
+			<xs:enumeration value="ABX" /><!-- airport="Albury" country="Australia" -->
+			<xs:enumeration value="AES" /><!-- airport="Alesund" country="Norway" -->
+			<xs:enumeration value="ALJ" /><!-- airport="Alexander Bay" country="South Africa" -->
+			<xs:enumeration value="ALY" /><!-- airport="Alexandria, El Nhouza country="Egypt" -->
+			<xs:enumeration value="ESF" /><!-- airport="Alexandria" country="USA" -->
+			<xs:enumeration value="FJR" /><!-- airport="Alfujairah (Fujairah)" country="UAE" -->
+			<xs:enumeration value="AHO" /><!-- airport="Alghero Sassari" country="Italy" -->
+			<xs:enumeration value="ALG" /><!-- airport="Algiers" country="Algeria" -->
+			<xs:enumeration value="ALC" /><!-- airport="Alicante" country="Spain" -->
+			<xs:enumeration value="ASP" /><!-- airport="Alice Springs" country="Australia" -->
+			<xs:enumeration value="ADY" /><!-- airport="Alldays" country="South Africa" -->
+			<xs:enumeration value="ABE" /><!-- airport="Allentown" country="USA" -->
+			<xs:enumeration value="ALA" /><!-- airport="Alma Ata" country="Kazakhstan" -->
+			<xs:enumeration value="LEI" /><!-- airport="Almeria" country="Spain" -->
+			<xs:enumeration value="ALP" /><!-- airport="Aleppo" country="Syria" -->
+			<xs:enumeration value="ALF" /><!-- airport="Alta" country="Norway" -->
+			<xs:enumeration value="ACH" /><!-- airport="Altenrhein" country="Switzerland" -->
+			<xs:enumeration value="AOO" /><!-- airport="Altoona" country="USA" -->
+			<xs:enumeration value="ASJ" /><!-- airport="Amami" country="Japan" -->
+			<xs:enumeration value="AMA" /><!-- airport="Amarillo" country="USA" -->
+			<xs:enumeration value="AMM" /><!-- airport="Amman" country="Jordan" -->
+			<xs:enumeration value="ATQ" /><!-- airport="Amritsar" country="India" -->
+			<xs:enumeration value="AMS" /><!-- airport="Amsterdam, Schiphol" country="Netherlands" -->
+			<xs:enumeration value="QNB" /><!-- airport="Anand" country="India" -->
+			<xs:enumeration value="ANC" /><!-- airport="Anchorage" country="USA" -->
+			<xs:enumeration value="AOI" /><!-- airport="Ancona" country="Italy" -->
+			<xs:enumeration value="ALV" /><!-- airport="Andorra La Vella H/P" country="Andorra" -->
+			<xs:enumeration value="AXA" /><!-- airport="Anguilla" country="Anguilla" -->
+			<xs:enumeration value="AJN" /><!-- airport="Anjouan" country="Comoros (Comores)" -->
+			<xs:enumeration value="ANK" /><!-- airport="Ankara" country="Turkey" -->
+			<xs:enumeration value="AAE" /><!-- airport="Annaba" country="Algeria" -->
+			<xs:enumeration value="ARB" /><!-- airport="Ann Arbor" country="USA" -->
+			<xs:enumeration value="NCY" /><!-- airport="Annecy" country="France" -->
+			<xs:enumeration value="ANB" /><!-- airport="Anniston" country="USA" -->
+			<xs:enumeration value="AYT" /><!-- airport="Antalya" country="Turkey" -->
+			<xs:enumeration value="TNR" /><!-- airport="Antananarivo (Tanannarive)" country="Madagascar" -->
+			<xs:enumeration value="ANU" /><!-- airport="Antigua" country="Antigua" -->
+			<xs:enumeration value="ANR" /><!-- airport="Antwerp" country="Belgium" -->
+			<xs:enumeration value="AOJ" /><!-- airport="Aomori" country="Japan" -->
+			<xs:enumeration value="APW" /><!-- airport="Apia" country="Samoa" -->
+			<xs:enumeration value="ATW" /><!-- airport="Appelton/Neenah/Menasha" country="USA" -->
+			<xs:enumeration value="AQJ" /><!-- airport="Aqaba" country="Jordan" -->
+			<xs:enumeration value="AJU" /><!-- airport="Aracaju" country="Brazil" -->
+			<xs:enumeration value="ARH" /><!-- airport="Arkhangelsk" country="Russian Federation" -->
+			<xs:enumeration value="ARK" /><!-- airport="Arusha" country="Tanzania" -->
+			<xs:enumeration value="GPA" /><!-- airport="Araxos" country="Greece" -->
+			<xs:enumeration value="RLT" /><!-- airport="Arlit" country="Niger" -->
+			<xs:enumeration value="AXS" /><!-- airport="Armenia" country="Colombia" -->
+			<xs:enumeration value="ACE" /><!-- airport="Arrecife/Lanzarote" country="Spain" -->
+			<xs:enumeration value="AUA" /><!-- airport="Aruba" country="Aruba" -->
+			<xs:enumeration value="AVL" /><!-- airport="Asheville" country="USA" -->
+			<xs:enumeration value="ASB" /><!-- airport="Ashgabat, Ashkhabat" country="Turkmenistan" -->
+			<xs:enumeration value="ASE" /><!-- airport="Aspen Snowmass" country="USA" -->
+			<xs:enumeration value="ATZ" /><!-- airport="Assiut" country="Egypt" -->
+			<xs:enumeration value="ASU" /><!-- airport="Asuncion" country="Paraguay" -->
+			<xs:enumeration value="ATH" /><!-- airport="Athens" country="Greece" -->
+			<xs:enumeration value="ASW" /><!-- airport="Aswan, Daraw" country="Egypt" -->
+			<xs:enumeration value="HEW" /><!-- airport="Athens, Hellinikon" country="Greece" -->
+			<xs:enumeration value="AHN" /><!-- airport="Athens" country="USA" -->
+			<xs:enumeration value="ATO" /><!-- airport="Athens" country="USA" -->
+			<xs:enumeration value="ATL" /><!-- airport="Atlanta" country="USA" -->
+			<xs:enumeration value="ACY" /><!-- airport="Atlantic City" country="USA" -->
+			<xs:enumeration value="YAT" /><!-- airport="Attawapiskat, NT" country="Canada" -->
+			<xs:enumeration value="AKL" /><!-- airport="Auckland" country="New Zealand" -->
+			<xs:enumeration value="AGB" /><!-- airport="Augsburg" country="Germany" -->
+			<xs:enumeration value="AGS" /><!-- airport="Augusta" country="USA" -->
+			<xs:enumeration value="AUG" /><!-- airport="Augusta" country="USA" -->
+			<xs:enumeration value="AUR" /><!-- airport="Aurillac" country="France" -->
+			<xs:enumeration value="AUS" /><!-- airport="Austin" country="USA" -->
+			<xs:enumeration value="AYQ" /><!-- airport="Ayers Rock" country="Australia" -->
+			<xs:enumeration value="AYR" /><!-- airport="Ayr" country="Australia" -->
+			<xs:enumeration value="BJZ" /><!-- airport="Badajoz" country="Spain" -->
+			<xs:enumeration value="BGW" /><!-- airport="Bagdad, Al Muthana" country="Iraq" -->
+			<xs:enumeration value="SDA" /><!-- airport="Bagdad, Saddam International" country="Iraq" -->
+			<xs:enumeration value="BHV" /><!-- airport="Bahawalpur" country="Pakistan" -->
+			<xs:enumeration value="BAH" /><!-- airport="Bahrain" country="Bahrain" -->
+			<xs:enumeration value="BSR" /><!-- airport="Basra, Basrah" country="Iraq" -->
+			<xs:enumeration value="BFL" /><!-- airport="Bakersfield" country="USA" -->
+			<xs:enumeration value="BAK" /><!-- airport="Baku" country="Azerbaijan" -->
+			<xs:enumeration value="BNK" /><!-- airport="Ballina" country="Australia" -->
+			<xs:enumeration value="BWI" /><!-- airport="Baltimore Washington Int'l MD" country="USA" -->
+			<xs:enumeration value="ABM" /><!-- airport="Bamaga" country="Australia" -->
+			<xs:enumeration value="BKO" /><!-- airport="Bamako" country="Mali" -->
+			<xs:enumeration value="BBY" /><!-- airport="Bambari" country="Central African Republic" -->
+			<xs:enumeration value="BWN" /><!-- airport="Bandar Seri Begawan" country="Brunei" -->
+			<xs:enumeration value="BLR" /><!-- airport="Bangalore" country="India" -->
+			<xs:enumeration value="BGU" /><!-- airport="Bangassou" country="Central African Republic" -->
+			<xs:enumeration value="BKK" /><!-- airport="Bangkok" country="Thailand" -->
+			<xs:enumeration value="BGR" /><!-- airport="Bangor" country="USA" -->
+			<xs:enumeration value="BGF" /><!-- airport="Bangui" country="Central African Republic" -->
+			<xs:enumeration value="BJL" /><!-- airport="Banjul" country="Gambia" -->
+			<xs:enumeration value="BNP" /><!-- airport="Bannu" country="Pakistan" -->
+			<xs:enumeration value="BCN" /><!-- airport="Barcelona" country="Spain" -->
+			<xs:enumeration value="BLA" /><!-- airport="Barcelona" country="Venezuela" -->
+			<xs:enumeration value="BDU" /><!-- airport="Bardufoss" country="Norway" -->
+			<xs:enumeration value="BRI" /><!-- airport="Bari" country="Italy" -->
+			<xs:enumeration value="BZL" /><!-- airport="Barisal" country="Bangladesh" -->
+			<xs:enumeration value="BDQ" /><!-- airport="Baronda" country="India" -->
+			<xs:enumeration value="BAQ" /><!-- airport="Barranquilla" country="Colombia" -->
+			<xs:enumeration value="BSL" /><!-- airport="Basel" country="Switzerland" -->
+			<xs:enumeration value="EAP" /><!-- airport="Basel/Mulhouse" country="Switzerland/France" -->
+			<xs:enumeration value="BIA" /><!-- airport="Bastia" country="France" -->
+			<xs:enumeration value="BTR" /><!-- airport="Baton Rouge" country="USA" -->
+			<xs:enumeration value="BYU" /><!-- airport="Bayreuth" country="Germany" -->
+			<xs:enumeration value="BPT" /><!-- airport="Beaumont/Pt. Arthur" country="USA" -->
+			<xs:enumeration value="BKW" /><!-- airport="Beckley" country="USA" -->
+			<xs:enumeration value="PEK" /><!-- airport="Beijing" country="China" -->
+			<xs:enumeration value="NAY" /><!-- airport="Beijing - Nanyuan" country="China" -->
+			<xs:enumeration value="BEW" /><!-- airport="Beira" country="Mozambique" -->
+			<xs:enumeration value="BEY" /><!-- airport="Beirut" country="Lebanon" -->
+			<xs:enumeration value="BEL" /><!-- airport="Belem" country="Brazil" -->
+			<xs:enumeration value="BHD" /><!-- airport="Belfast - Harbour" country="United Kingdom" -->
+			<xs:enumeration value="BFS" /><!-- airport="Belfast International" country="United Kingdom" -->
+			<xs:enumeration value="IXG" /><!-- airport="Belgaum" country="India" -->
+			<xs:enumeration value="BEG" /><!-- airport="Belgrad (Beograd)" country="Yugoslavia" -->
+			<xs:enumeration value="BZE" /><!-- airport="Belize City" country="Belize" -->
+			<xs:enumeration value="BLI" /><!-- airport="Bellingham" country="USA" -->
+			<xs:enumeration value="CNF" /><!-- airport="Belo Horizonte" country="Brazil" -->
+			<xs:enumeration value="BJI" /><!-- airport="Bemidji" country="USA" -->
+			<xs:enumeration value="BEN" /><!-- airport="Bengasi" country="Libya" -->
+			<xs:enumeration value="BUG" /><!-- airport="Bengueka" country="Angola" -->
+			<xs:enumeration value="BEH" /><!-- airport="Benton Harbour" country="USA" -->
+			<xs:enumeration value="BBT" /><!-- airport="Berberati" country="Central African Republic" -->
+			<xs:enumeration value="BGY" /><!-- airport="Bergamo" country="Italy" -->
+			<xs:enumeration value="BGO" /><!-- airport="Bergen" country="Norway" -->
+			<xs:enumeration value="BER" /><!-- airport="Berlin" country="Germany" -->
+			<xs:enumeration value="SXF" /><!-- airport="Berlin, Schoenefeld" country="Germany" -->
+			<xs:enumeration value="TXL" /><!-- airport="Berlin, Tegel" country="Germany" -->
+			<xs:enumeration value="THF" /><!-- airport="Berlin, Tempelhof" country="Germany" -->
+			<xs:enumeration value="BDA" /><!-- airport="Bermuda" country="Bermuda" -->
+			<xs:enumeration value="BRN" /><!-- airport="Bern" country="Switzerland" -->
+			<xs:enumeration value="ZDJ" /><!-- airport="Bern" country="Switzerland" -->
+			<xs:enumeration value="BET" /><!-- airport="Bethel" country="USA" -->
+			<xs:enumeration value="BHO" /><!-- airport="Bhopal" country="India" -->
+			<xs:enumeration value="BBI" /><!-- airport="Bhubaneswar" country="India" -->
+			<xs:enumeration value="BIQ" /><!-- airport="Biarritz" country="France" -->
+			<xs:enumeration value="BIO" /><!-- airport="Bilbao" country="Spain" -->
+			<xs:enumeration value="BIL" /><!-- airport="Billings" country="USA" -->
+			<xs:enumeration value="BLL" /><!-- airport="Billund" country="Denmark" -->
+			<xs:enumeration value="BTU" /><!-- airport="Bintulu" country="Malaysia" -->
+			<xs:enumeration value="IRO" /><!-- airport="Biraro" country="Central African Republic" -->
+			<xs:enumeration value="BHX" /><!-- airport="Birmingham" country="United Kingdom" -->
+			<xs:enumeration value="BHM" /><!-- airport="Birmingham" country="USA" -->
+			<xs:enumeration value="BIS" /><!-- airport="Bismarck/Mandan" country="USA" -->
+			<xs:enumeration value="BXO" /><!-- airport="Bissau" country="Guinea Bissau" -->
+			<xs:enumeration value="BLT" /><!-- airport="Blackwater" country="Australia" -->
+			<xs:enumeration value="BLZ" /><!-- airport="Blantyre" country="Malawi" -->
+			<xs:enumeration value="BHE" /><!-- airport="Blenheim" country="New Zealand" -->
+			<xs:enumeration value="BFN" /><!-- airport="Bloemfontein" country="South Africa" -->
+			<xs:enumeration value="BMI" /><!-- airport="Bloomington" country="USA" -->
+			<xs:enumeration value="BMG" /><!-- airport="Bloomington" country="USA" -->
+			<xs:enumeration value="BLF" /><!-- airport="Bluefield" country="USA" -->
+			<xs:enumeration value="BVB" /><!-- airport="Boa Vista" country="Brazil" -->
+			<xs:enumeration value="BOY" /><!-- airport="Bobo/Dioulasso" country="Burkina Faso" -->
+			<xs:enumeration value="BOO" /><!-- airport="Bodo" country="Norway" -->
+			<xs:enumeration value="BOG" /><!-- airport="Bogota" country="Colombia" -->
+			<xs:enumeration value="BOI" /><!-- airport="Boise" country="USA" -->
+			<xs:enumeration value="BLQ" /><!-- airport="Bologna" country="Italy" -->
+			<xs:enumeration value="BOM" /><!-- airport="Bombay" country="India" -->
+			<xs:enumeration value="BON" /><!-- airport="Bonaire" country="Netherlands Antilles" -->
+			<xs:enumeration value="YVB" /><!-- airport="Bonaventure, PQ" country="Canada" -->
+			<xs:enumeration value="BOB" /><!-- airport="Bora Bora" country="French Polynesia" -->
+			<xs:enumeration value="BOD" /><!-- airport="Bordeaux" country="France" -->
+			<xs:enumeration value="HBH" /><!-- airport="Borg El Arab" country="Egypt" -->
+			<xs:enumeration value="BXS" /><!-- airport="Borrego Springs" country="USA" -->
+			<xs:enumeration value="BOS" /><!-- airport="Boston - Logan" country="USA" -->
+			<xs:enumeration value="BYK" /><!-- airport="Bouake" country="Ivory Coast" -->
+			<xs:enumeration value="BOJ" /><!-- airport="Bourgas/Burgas" country="Bulgaria" -->
+			<xs:enumeration value="ZBO" /><!-- airport="Bowen" country="Australia" -->
+			<xs:enumeration value="BZN" /><!-- airport="Bozeman" country="USA" -->
+			<xs:enumeration value="BFD" /><!-- airport="Bradford/Warren" country="USA" -->
+			<xs:enumeration value="BRD" /><!-- airport="Brainerd" country="USA" -->
+			<xs:enumeration value="BMP" /><!-- airport="Brampton Island" country="Australia" -->
+			<xs:enumeration value="BSB" /><!-- airport="Brasilia" country="Brazil" -->
+			<xs:enumeration value="BTS" /><!-- airport="Bratislava" country="Slovakia" -->
+			<xs:enumeration value="BZV" /><!-- airport="Brazzaville" country="Congo" -->
+			<xs:enumeration value="BRE" /><!-- airport="Bremen" country="Germany" -->
+			<xs:enumeration value="BES" /><!-- airport="Brest" country="France" -->
+			<xs:enumeration value="BIV" /><!-- airport="Bria" country="Central African Republic" -->
+			<xs:enumeration value="BDR" /><!-- airport="Bridgeport" country="USA" -->
+			<xs:enumeration value="BGI" /><!-- airport="Bridgetown, Grantley Adams Int'l"
+				country="Barbados" -->
+			<xs:enumeration value="BDS" /><!-- airport="Brindisi" country="Italy" -->
+			<xs:enumeration value="BNE" /><!-- airport="Brisbane" country="Australia" -->
+			<xs:enumeration value="BRS" /><!-- airport="Bristol" country="United Kingdom" -->
+			<xs:enumeration value="BNN" /><!-- airport="Broennoeysund" country="Norway" -->
+			<xs:enumeration value="BHQ" /><!-- airport="Broken Hill" country="Australia" -->
+			<xs:enumeration value="BKX" /><!-- airport="Brookings" country="USA" -->
+			<xs:enumeration value="BME" /><!-- airport="Broome" country="Australia" -->
+			<xs:enumeration value="BQK" /><!-- airport="Brunswick" country="USA" -->
+			<xs:enumeration value="BRU" /><!-- airport="Brussels" country="Belgium" -->
+			<xs:enumeration value="BGA" /><!-- airport="Bucaramanga" country="Colombia" -->
+			<xs:enumeration value="BUD" /><!-- airport="Budapest, Ferihegy" country="Hungary" -->
+			<xs:enumeration value="BUE" /><!-- airport="Buenos Aires" country="Argentina" -->
+			<xs:enumeration value="EZE" /><!-- airport="Buenos Aires, Ezeiza Int'l" country="Argentina" -->
+			<xs:enumeration value="AEP" /><!-- airport="Buenos Aires, Jorge Newbery" country="Argentina" -->
+			<xs:enumeration value="BFO" /><!-- airport="Buffalo Range" country="Zimbabwe" -->
+			<xs:enumeration value="BUF" /><!-- airport="Buffalo/Niagara Falls" country="USA" -->
+			<xs:enumeration value="BJM" /><!-- airport="Bujumbura" country="Burundi" -->
+			<xs:enumeration value="BUH" /><!-- airport="Bucharest" country="Romania" -->
+			<xs:enumeration value="OTP" /><!-- airport="Bucharest, Otopeni" country="Romania" -->
+			<xs:enumeration value="BUQ" /><!-- airport="Bulawayo" country="Zimbabwe" -->
+			<xs:enumeration value="BHC" /><!-- airport="Bullhead City" country="USA" -->
+			<xs:enumeration value="BDB" /><!-- airport="Bundaberg" country="Australia" -->
+			<xs:enumeration value="BUR" /><!-- airport="Burbank" country="USA" -->
+			<xs:enumeration value="BRL" /><!-- airport="Burlington" country="USA" -->
+			<xs:enumeration value="BTV" /><!-- airport="Burlington" country="USA" -->
+			<xs:enumeration value="BWT" /><!-- airport="Burnie (Wynyard)" country="Australia" -->
+			<xs:enumeration value="BTM" /><!-- airport="Butte" country="USA" -->
+			<xs:enumeration value="CAB" /><!-- airport="Cabinda" country="Angola" -->
+			<xs:enumeration value="CAG" /><!-- airport="Cagliari" country="Italy" -->
+			<xs:enumeration value="CNS" /><!-- airport="Cairns" country="Australia" -->
+			<xs:enumeration value="CAI" /><!-- airport="Cairo Int'l" country="Egypt" -->
+			<xs:enumeration value="CCU" /><!-- airport="Calcutta (Kolkata)" country="India" -->
+			<xs:enumeration value="YYC" /><!-- airport="Calgary/Banff" country="Canada" -->
+			<xs:enumeration value="CLO" /><!-- airport="Cali" country="Colombia" -->
+			<xs:enumeration value="CCJ" /><!-- airport="Calicut" country="India" -->
+			<xs:enumeration value="CLY" /><!-- airport="Calvi" country="France" -->
+			<xs:enumeration value="YCB" /><!-- airport="Cambridge Bay" country="Canada" -->
+			<xs:enumeration value="CBG" /><!-- airport="Cambrigde" country="United Kingdom" -->
+			<xs:enumeration value="CGR" /><!-- airport="Campo Grande" country="Brazil" -->
+			<xs:enumeration value="CBR" /><!-- airport="Canberra" country="Australia" -->
+			<xs:enumeration value="CUN" /><!-- airport="Cancun" country="Mexico" -->
+			<xs:enumeration value="CPT" /><!-- airport="Cape Town" country="South Africa" -->
+			<xs:enumeration value="CCS" /><!-- airport="Caracas" country="Venezuela" -->
+			<xs:enumeration value="CWL" /><!-- airport="Cardiff" country="United Kingdom" -->
+			<xs:enumeration value="CLD" /><!-- airport="Carlsbad" country="USA" -->
+			<xs:enumeration value="CVQ" /><!-- airport="Carnarvon" country="Australia" -->
+			<xs:enumeration value="CRF" /><!-- airport="Carnot" country="Central African Republic" -->
+			<xs:enumeration value="LRM" /><!-- airport="Casa de Campo/La Romana" country="Dominican Republic" -->
+			<xs:enumeration value="CAS" /><!-- airport="Casablanca" country="Morocco" -->
+			<xs:enumeration value="CMN" /><!-- airport="Casablanca, Mohamed V" country="Morocco" -->
+			<xs:enumeration value="CSI" /><!-- airport="Casino" country="Australia" -->
+			<xs:enumeration value="CPR" /><!-- airport="Casper" country="USA" -->
+			<xs:enumeration value="CTG" /><!-- airport="Catagena" country="Colombia" -->
+			<xs:enumeration value="CTA" /><!-- airport="Catania" country="Italy" -->
+			<xs:enumeration value="CAY" /><!-- airport="Cayenne" country="French Guayana" -->
+			<xs:enumeration value="CBU" /><!-- airport="Cebu" country="Philippines" -->
+			<xs:enumeration value="CDC" /><!-- airport="Cedar City" country="USA" -->
+			<xs:enumeration value="CID" /><!-- airport="Cedar Rapids" country="USA" -->
+			<xs:enumeration value="CED" /><!-- airport="Ceduna" country="Australia" -->
+			<xs:enumeration value="CES" /><!-- airport="Cessnock" country="Australia" -->
+			<xs:enumeration value="KHV" /><!-- airport="Chabarovsk (Khabarovsk)" country="Russia" -->
+			<xs:enumeration value="CMF" /><!-- airport="Chambery" country="France" -->
+			<xs:enumeration value="CMI" /><!-- airport="Champaign" country="USA" -->
+			<xs:enumeration value="IXC" /><!-- airport="Chandigarh" country="India" -->
+			<xs:enumeration value="CHQ" /><!-- airport="Chania" country="Greece" -->
+			<xs:enumeration value="CHS" /><!-- airport="Charleston" country="USA" -->
+			<xs:enumeration value="CRW" /><!-- airport="Charleston" country="USA" -->
+			<xs:enumeration value="CLT" /><!-- airport="Charlotte" country="USA" -->
+			<xs:enumeration value="CHO" /><!-- airport="Charlottesville" country="USA" -->
+			<xs:enumeration value="CXT" /><!-- airport="Charters Towers" country="Australia" -->
+			<xs:enumeration value="CHA" /><!-- airport="Chattanooga" country="USA" -->
+			<xs:enumeration value="MAA" /><!-- airport="Chennai (Madras)" country="India" -->
+			<xs:enumeration value="CNX" /><!-- airport="Chiang Mai" country="Thailand" -->
+			<xs:enumeration value="QCB" /><!-- airport="Chiba City" country="Japan" -->
+			<xs:enumeration value="MDW" /><!-- airport="Chicago" country="USA" -->
+			<xs:enumeration value="ORD" /><!-- airport="Chicago O'Hare Int'l" country="USA" -->
+			<xs:enumeration value="CHI" /><!-- airport="Chicago" country="USA" -->
+			<xs:enumeration value="CZA" /><!-- airport="Chichen Itza" country="Mexico" -->
+			<xs:enumeration value="CIC" /><!-- airport="Chico" country="USA" -->
+			<xs:enumeration value="CUU" /><!-- airport="Chihuahua, Gen Fierro Villalobos" country="Mexico" -->
+			<xs:enumeration value="JKH" /><!-- airport="Chios" country="Greece" -->
+			<xs:enumeration value="CIP" /><!-- airport="Chipata" country="Zambia" -->
+			<xs:enumeration value="HTA" /><!-- airport="Chita (Tschita)" country="Russia" -->
+			<xs:enumeration value="CTS" /><!-- airport="Chitose" country="Japan" -->
+			<xs:enumeration value="CJL" /><!-- airport="Chitral" country="Pakistan" -->
+			<xs:enumeration value="CGP" /><!-- airport="Chittagong" country="Bangladesh" -->
+			<xs:enumeration value="CHC" /><!-- airport="Christchurch" country="New Zealand" -->
+			<xs:enumeration value="CXI" /><!-- airport="Christmas Line" country="Iceland" -->
+			<xs:enumeration value="CCZ" /><!-- airport="Chub Cay" country="Bahamas" -->
+			<xs:enumeration value="YYQ" /><!-- airport="Churchill" country="Canada" -->
+			<xs:enumeration value="CFG" /><!-- airport="Cienfuegos" country="Canada" -->
+			<xs:enumeration value="CVG" /><!-- airport="Cincinnati" country="USA" -->
+			<xs:enumeration value="CME" /><!-- airport="Ciudad Del Carmen" country="Mexico" -->
+			<xs:enumeration value="CJS" /><!-- airport="Ciudad Juarez" country="Mexico" -->
+			<xs:enumeration value="CEN" /><!-- airport="Ciudad Obregon" country="Mexico" -->
+			<xs:enumeration value="CVM" /><!-- airport="Ciudad Victoria" country="Mexico" -->
+			<xs:enumeration value="CKB" /><!-- airport="Clarksburg" country="USA" -->
+			<xs:enumeration value="CMQ" /><!-- airport="Clermont" country="Australia" -->
+			<xs:enumeration value="CFE" /><!-- airport="Clermont Ferrand" country="France" -->
+			<xs:enumeration value="BKL" /><!-- airport="Cleveland" country="USA" -->
+			<xs:enumeration value="CLE" /><!-- airport="Cleveland" country="USA" -->
+			<xs:enumeration value="CBB" /><!-- airport="Cochabamba" country="Bolivia" -->
+			<xs:enumeration value="COK" /><!-- airport="Cochin" country="India" -->
+			<xs:enumeration value="COD" /><!-- airport="Cody/Powell/Yellowstone" country="USA" -->
+			<xs:enumeration value="KCC" /><!-- airport="Coffmann Cove" country="USA" -->
+			<xs:enumeration value="CFS" /><!-- airport="Coffs Harbour" country="Australia" -->
+			<xs:enumeration value="CJB" /><!-- airport="Coimbatore" country="India" -->
+			<xs:enumeration value="CLQ" /><!-- airport="Colima" country="Mexico" -->
+			<xs:enumeration value="CLL" /><!-- airport="College Station/Bryan" country="USA" -->
+			<xs:enumeration value="KCE" /><!-- airport="Collinsville" country="Australia" -->
+			<xs:enumeration value="CGN" /><!-- airport="Cologne (Koeln)/Bonn" country="Germany" -->
+			<xs:enumeration value="CMB" /><!-- airport="Colombo" country="Sri Lanka" -->
+			<xs:enumeration value="COS" /><!-- airport="Colorado Springs" country="USA" -->
+			<xs:enumeration value="CAE" /><!-- airport="Columbia" country="USA" -->
+			<xs:enumeration value="CSG" /><!-- airport="Columbus" country="USA" -->
+			<xs:enumeration value="CMH" /><!-- airport="Columbus" country="USA" -->
+			<xs:enumeration value="CKY" /><!-- airport="Conakry" country="Guinea" -->
+			<xs:enumeration value="CCR" /><!-- airport="Concord" country="USA" -->
+			<xs:enumeration value="CZL" /><!-- airport="Constantine" country="Algeria" -->
+			<xs:enumeration value="CND" /><!-- airport="Constanza" country="Romania" -->
+			<xs:enumeration value="CPD" /><!-- airport="Coober Pedy" country="Australia" -->
+			<xs:enumeration value="CTN" /><!-- airport="Cooktown" country="Australia" -->
+			<xs:enumeration value="OOM" /><!-- airport="Cooma" country="Australia" -->
+			<xs:enumeration value="CPH" /><!-- airport="Copenhagen" country="Denmark" -->
+			<xs:enumeration value="COR" /><!-- airport="Cordoba" country="Argentina" -->
+			<xs:enumeration value="ODB" /><!-- airport="Cordoba" country="Spain" -->
+			<xs:enumeration value="CDV" /><!-- airport="Cordova" country="USA" -->
+			<xs:enumeration value="CFU" /><!-- airport="Corfu" country="Greece" -->
+			<xs:enumeration value="ORK" /><!-- airport="Cork" country="Ireland" -->
+			<xs:enumeration value="CRP" /><!-- airport="Corpus Christi" country="USA" -->
+			<xs:enumeration value="COO" /><!-- airport="Cotonou" country="Benin" -->
+			<xs:enumeration value="CZM" /><!-- airport="Cozmel" country="Mexico" -->
+			<xs:enumeration value="CGA" /><!-- airport="Craig" country="USA" -->
+			<xs:enumeration value="CEC" /><!-- airport="Crescent City" country="USA" -->
+			<xs:enumeration value="CGB" /><!-- airport="Cuiaba" country="Brazil" -->
+			<xs:enumeration value="CUL" /><!-- airport="Culiacan" country="Mexico" -->
+			<xs:enumeration value="CUR" /><!-- airport="Curacao" country="Netherlands Antilles" -->
+			<xs:enumeration value="CWB" /><!-- airport="Curitiba" country="Brazil" -->
+			<xs:enumeration value="DKR" /><!-- airport="Dakar" country="Senegal" -->
+			<xs:enumeration value="DLM" /><!-- airport="Dalaman" country="Turkey" -->
+			<xs:enumeration value="DBY" /><!-- airport="Dalby" country="Australia" -->
+			<xs:enumeration value="DAL" /><!-- airport="Dallas" country="USA" -->
+			<xs:enumeration value="DFW" /><!-- airport="Dallas/Ft. Worth" country="USA" -->
+			<xs:enumeration value="DJO" /><!-- airport="Daloa" country="Ivory Coast" -->
+			<xs:enumeration value="DAM" /><!-- airport="Damaskus" country="Syria" -->
+			<xs:enumeration value="DAN" /><!-- airport="Danville" country="USA" -->
+			<xs:enumeration value="DAR" /><!-- airport="Dar es Salam (Daressalam)" country="Tanzania" -->
+			<xs:enumeration value="DRW" /><!-- airport="Darwin" country="Australia" -->
+			<xs:enumeration value="DDI" /><!-- airport="Daydream Island" country="Australia" -->
+			<xs:enumeration value="DAY" /><!-- airport="Dayton" country="USA" -->
+			<xs:enumeration value="DAB" /><!-- airport="Daytona Beach" country="USA" -->
+			<xs:enumeration value="DEC" /><!-- airport="Decatur" country="USA" -->
+			<xs:enumeration value="YDF" /><!-- airport="Deer Lake/Corner Brook" country="Canada" -->
+			<xs:enumeration value="DEL" /><!-- airport="Delhi, Indira Gandhi" country="India" -->
+			<xs:enumeration value="HAG" /><!-- airport="Den Haag (The Hague)" country="Netherlands" -->
+			<xs:enumeration value="DPS" /><!-- airport="Denpasar/Bali" country="Indonesia" -->
+			<xs:enumeration value="DEN" /><!-- airport="Denver International" country="USA" -->
+			<xs:enumeration value="DSK" /><!-- airport="Dera Ismail Khan" country="Pakistan" -->
+			<xs:enumeration value="DRB" /><!-- airport="Derby" country="Australia" -->
+			<xs:enumeration value="EMA" /><!-- airport="Derby (East Midlands)" country="United Kingdom" -->
+			<xs:enumeration value="LDY" /><!-- airport="Derry (Londonderry)" country="United Kingdom" -->
+			<xs:enumeration value="DSM" /><!-- airport="Des Moines" country="USA" -->
+			<xs:enumeration value="DET" /><!-- airport="Detroit City" country="USA" -->
+			<xs:enumeration value="DTW" /><!-- airport="Detroit Metropolitan Wayne County" country="USA" -->
+			<xs:enumeration value="DTT" /><!-- airport="Detroit Metropolitan Area" country="USA" -->
+			<xs:enumeration value="DVL" /><!-- airport="Devils Lake" country="USA" -->
+			<xs:enumeration value="DPO" /><!-- airport="Devonport" country="Australia" -->
+			<xs:enumeration value="DHA" /><!-- airport="Dhahran" country="Saudi Arabia" -->
+			<xs:enumeration value="DAC" /><!-- airport="Dhaka" country="Bangladesh" -->
+			<xs:enumeration value="DLG" /><!-- airport="Dillingham" country="USA" -->
+			<xs:enumeration value="DNR" /><!-- airport="Dinard" country="France" -->
+			<xs:enumeration value="DJE" /><!-- airport="Djerba" country="Tunisia" -->
+			<xs:enumeration value="JIB" /><!-- airport="Djibouti" country="Djibouti" -->
+			<xs:enumeration value="DOH" /><!-- airport="Doha" country="Qatar" -->
+			<xs:enumeration value="DTM" /><!-- airport="Dortmund" country="Germany" -->
+			<xs:enumeration value="DHN" /><!-- airport="Dothan" country="USA" -->
+			<xs:enumeration value="DLA" /><!-- airport="Douala" country="Cameroon" -->
+			<xs:enumeration value="DRS" /><!-- airport="Dresden" country="Germany" -->
+			<xs:enumeration value="DXB" /><!-- airport="Dubai" country="UAE" -->
+			<xs:enumeration value="DBO" /><!-- airport="Dubbo" country="Australia" -->
+			<xs:enumeration value="DUB" /><!-- airport="Dublin" country="Ireland" -->
+			<xs:enumeration value="DUJ" /><!-- airport="Dubois" country="USA" -->
+			<xs:enumeration value="DBV" /><!-- airport="Dubrovnik" country="Croatia (Hrvatska)" -->
+			<xs:enumeration value="DBQ" /><!-- airport="Dubuque" country="USA" -->
+			<xs:enumeration value="DUS" /><!-- airport="Duesseldorf" country="Germany" -->
+			<xs:enumeration value="DLH" /><!-- airport="Duluth" country="USA" -->
+			<xs:enumeration value="DUD" /><!-- airport="Dunedin" country="New Zealand" -->
+			<xs:enumeration value="DKI" /><!-- airport="Dunk Iceland" country="Australia" -->
+			<xs:enumeration value="DRO" /><!-- airport="Durango" country="USA" -->
+			<xs:enumeration value="DUR" /><!-- airport="Durban" country="South Africa" -->
+			<xs:enumeration value="DYU" /><!-- airport="Dushanbe (Duschanbe)" country="Tadschikistan" -->
+			<xs:enumeration value="DUT" /><!-- airport="Dutch Harbor" country="USA" -->
+			<xs:enumeration value="DYA" /><!-- airport="Dysart" country="Australia" -->
+			<xs:enumeration value="DZA" /><!-- airport="Dzaoudzi" country="Mayotte" -->
+			<xs:enumeration value="ELS" /><!-- airport="East London" country="South Africa" -->
+			<xs:enumeration value="IPC" /><!-- airport="Easter Island" country="Chile" -->
+			<xs:enumeration value="EAU" /><!-- airport="Eau Clarie" country="USA" -->
+			<xs:enumeration value="EDI" /><!-- airport="Edinburgh" country="United Kingdom" -->
+			<xs:enumeration value="YEA" /><!-- airport="Edmonton" country="Canada" -->
+			<xs:enumeration value="YEG" /><!-- airport="Edmonton, International" country="Canada" -->
+			<xs:enumeration value="YXD" /><!-- airport="Edmonton, Municipal" country="Canada" -->
+			<xs:enumeration value="EGS" /><!-- airport="Egilsstadir" country="Iceland" -->
+			<xs:enumeration value="EIN" /><!-- airport="Eindhoven" country="Netherlands" -->
+			<xs:enumeration value="ELP" /><!-- airport="El Paso" country="USA" -->
+			<xs:enumeration value="ETH" /><!-- airport="Elat" country="Israel" -->
+			<xs:enumeration value="VDA" /><!-- airport="Elat, Ovula" country="Israel" -->
+			<xs:enumeration value="EKI" /><!-- airport="Elkhart" country="USA" -->
+			<xs:enumeration value="EKO" /><!-- airport="Elko" country="USA" -->
+			<xs:enumeration value="ELL" /><!-- airport="Ellisras" country="South Africa" -->
+			<xs:enumeration value="EMY" /><!-- airport="El Minya" country="Egypt" -->
+			<xs:enumeration value="ELM" /><!-- airport="Elmira" country="USA" -->
+			<xs:enumeration value="ELY" /><!-- airport="Ely" country="USA" -->
+			<xs:enumeration value="EDR" /><!-- airport="Emerald" country="Australia" -->
+			<xs:enumeration value="EMD" /><!-- airport="Emerald" country="Australia" -->
+			<xs:enumeration value="ENF" /><!-- airport="Enontekioe" country="Finland" -->
+			<xs:enumeration value="EBB" /><!-- airport="Entebbe" country="Uganda" -->
+			<xs:enumeration value="ERF" /><!-- airport="Erfurt" country="Germany" -->
+			<xs:enumeration value="ERI" /><!-- airport="Erie" country="USA" -->
+			<xs:enumeration value="EVN" /><!-- airport="Eriwan (Yerevan, Jerevan)" country="Armenia" -->
+			<xs:enumeration value="EBJ" /><!-- airport="Esbjerg" country="Denmark" -->
+			<xs:enumeration value="ESC" /><!-- airport="Escabana" country="USA" -->
+			<xs:enumeration value="EPR" /><!-- airport="Esperance" country="Australia" -->
+			<xs:enumeration value="EUG" /><!-- airport="Eugene" country="USA" -->
+			<xs:enumeration value="ACV" /><!-- airport="Eureka" country="USA" -->
+			<xs:enumeration value="EVV" /><!-- airport="Evansville" country="USA" -->
+			<xs:enumeration value="EVE" /><!-- airport="Evenes" country="Norway" -->
+			<xs:enumeration value="FAI" /><!-- airport="Fairbanks" country="USA" -->
+			<xs:enumeration value="LYP" /><!-- airport="Faisalabad" country="Pakistan" -->
+			<xs:enumeration value="FAR" /><!-- airport="Fargo" country="USA" -->
+			<xs:enumeration value="FMN" /><!-- airport="Farmington" country="USA" -->
+			<xs:enumeration value="FAO" /><!-- airport="Faro" country="Portugal" -->
+			<xs:enumeration value="FAE" /><!-- airport="Faroer" country="Denmark" -->
+			<xs:enumeration value="FYV" /><!-- airport="Fayetteville" country="USA" -->
+			<xs:enumeration value="FAY" /><!-- airport="Fayetteville/Ft. Bragg" country="USA" -->
+			<xs:enumeration value="FEZ" /><!-- airport="Fes" country="Morocco" -->
+			<xs:enumeration value="FSC" /><!-- airport="Figari" country="France" -->
+			<xs:enumeration value="FLG" /><!-- airport="Flagstaff" country="USA" -->
+			<xs:enumeration value="YFO" /><!-- airport="Flin Flon" country="Canada" -->
+			<xs:enumeration value="FNT" /><!-- airport="Flint" country="USA" -->
+			<xs:enumeration value="FLR" /><!-- airport="Florence" country="Italy" -->
+			<xs:enumeration value="FLO" /><!-- airport="Florence" country="USA" -->
+			<xs:enumeration value="FLN" /><!-- airport="Florianopolis" country="Brazil" -->
+			<xs:enumeration value="FRO" /><!-- airport="Floro" country="Norway" -->
+			<xs:enumeration value="YFA" /><!-- airport="Fort Albert" country="Canada" -->
+			<xs:enumeration value="FDF" /><!-- airport="Fort de France" country="Martinique" -->
+			<xs:enumeration value="FOD" /><!-- airport="Fort Dodge" country="USA" -->
+			<xs:enumeration value="FHU" /><!-- airport="Fort Huachuca/Sierra Vista" country="USA" -->
+			<xs:enumeration value="FLL" /><!-- airport="Fort Lauderdale/Hollywood" country="USA" -->
+			<xs:enumeration value="YMM" /><!-- airport="Fort McMurray" country="Canada" -->
+			<xs:enumeration value="FMY" /><!-- airport="Fort Myers" country="USA" -->
+			<xs:enumeration value="RSW" /><!-- airport="Fort Myers" country="USA" -->
+			<xs:enumeration value="YSM" /><!-- airport="Fort Smith" country="Canada" -->
+			<xs:enumeration value="FSM" /><!-- airport="Fort Smith" country="USA" -->
+			<xs:enumeration value="YXJ" /><!-- airport="Fort St. John" country="Canada" -->
+			<xs:enumeration value="VPS" /><!-- airport="Fort Walton Beach" country="USA" -->
+			<xs:enumeration value="FWA" /><!-- airport="Fort Wayne" country="USA" -->
+			<xs:enumeration value="FOR" /><!-- airport="Fortaleza" country="Brazil" -->
+			<xs:enumeration value="FRW" /><!-- airport="Francistown" country="Zimbabwe" -->
+			<xs:enumeration value="FRA" /><!-- airport="Frankfurt/Main Int'l" country="Germany" -->
+			<xs:enumeration value="HNN" /><!-- airport="Frankfurt/Hahn" country="Germany" -->
+			<xs:enumeration value="FKL" /><!-- airport="Franklin/Oil City" country="USA" -->
+			<xs:enumeration value="YFC" /><!-- airport="Fredericton" country="Canada" -->
+			<xs:enumeration value="FPO" /><!-- airport="Freeport" country="Bahamas" -->
+			<xs:enumeration value="FNA" /><!-- airport="Freetown" country="Sierra Leone" -->
+			<xs:enumeration value="FRJ" /><!-- airport="Frejus" country="France" -->
+			<xs:enumeration value="FAT" /><!-- airport="Fresno" country="USA" -->
+			<xs:enumeration value="FDH" /><!-- airport="Friedrichshafen" country="Germany" -->
+			<xs:enumeration value="FUE" /><!-- airport="Fuerteventura" country="Spain" -->
+			<xs:enumeration value="FUK" /><!-- airport="Fukuoka" country="Japan" -->
+			<xs:enumeration value="FKS" /><!-- airport="Fukushima-shi, Fukushima " country="Japan" -->
+			<xs:enumeration value="FNC" /><!-- airport="Funchal" country="Portugal" -->
+			<xs:enumeration value="FUT" /><!-- airport="Futuna" country="Wallis and Futuna Islands" -->
+			<xs:enumeration value="GBE" /><!-- airport="Gaborone" country="Botswana" -->
+			<xs:enumeration value="GAD" /><!-- airport="Gadsden" country="USA" -->
+			<xs:enumeration value="GNV" /><!-- airport="Gainesville" country="USA" -->
+			<xs:enumeration value="GWY" /><!-- airport="Galway" country="Ireland" -->
+			<xs:enumeration value="YQX" /><!-- airport="Gander" country="Canada" -->
+			<xs:enumeration value="GOU" /><!-- airport="Garoua" country="Cameroon" -->
+			<xs:enumeration value="GDN" /><!-- airport="Gdansk" country="Poland" -->
+			<xs:enumeration value="GEX" /><!-- airport="Geelong" country="Australia" -->
+			<xs:enumeration value="GVA" /><!-- airport="Geneva" country="Switzerland" -->
+			<xs:enumeration value="GOA" /><!-- airport="Genoa" country="Italy" -->
+			<xs:enumeration value="GRJ" /><!-- airport="George" country="South Africa" -->
+			<xs:enumeration value="GEO" /><!-- airport="Georgetown" country="Guyana" -->
+			<xs:enumeration value="GET" /><!-- airport="Geraldton" country="Australia" -->
+			<xs:enumeration value="GRO" /><!-- airport="Gerona" country="Spain" -->
+			<xs:enumeration value="GIB" /><!-- airport="Gibraltar" country="Gibraltar" -->
+			<xs:enumeration value="GCC" /><!-- airport="Gilette" country="USA" -->
+			<xs:enumeration value="GIL" /><!-- airport="Gilgit" country="Pakistan" -->
+			<xs:enumeration value="YGX" /><!-- airport="Gillam" country="Canada" -->
+			<xs:enumeration value="GLT" /><!-- airport="Gladstone" country="Australia" -->
+			<xs:enumeration value="PIK" /><!-- airport="Glasgow, Prestwick" country="United Kingdom" -->
+			<xs:enumeration value="GLA" /><!-- airport="Glasgow" country="United Kingdom" -->
+			<xs:enumeration value="GGW" /><!-- airport="Glasgow" country="USA" -->
+			<xs:enumeration value="GDV" /><!-- airport="Glendive" country="USA" -->
+			<xs:enumeration value="GOI" /><!-- airport="Goa" country="India" -->
+			<xs:enumeration value="GYN" /><!-- airport="Goiania" country="Brazil" -->
+			<xs:enumeration value="OOL" /><!-- airport="Gold Coast" country="Australia" -->
+			<xs:enumeration value="GOO" /><!-- airport="Goondiwindi" country="Australia" -->
+			<xs:enumeration value="YYR" /><!-- airport="Goose Bay" country="Canada" -->
+			<xs:enumeration value="GOZ" /><!-- airport="Gorna" country="Bulgaria" -->
+			<xs:enumeration value="GOT" /><!-- airport="Goteborg" country="Sweden" -->
+			<xs:enumeration value="GOV" /><!-- airport="Gove (Nhulunbuy)" country="Australia" -->
+			<xs:enumeration value="GHB" /><!-- airport="Govenors Harbour" country="Bahamas" -->
+			<xs:enumeration value="GRX" /><!-- airport="Granada" country="Spain" -->
+			<xs:enumeration value="GBI" /><!-- airport="Grand Bahama" country="Bahamas" -->
+			<xs:enumeration value="GCN" /><!-- airport="Grand Canyon" country="USA" -->
+			<xs:enumeration value="GCM" /><!-- airport="Grand Cayman" country="Cayman Islands" -->
+			<xs:enumeration value="GFK" /><!-- airport="Grand Forks" country="USA" -->
+			<xs:enumeration value="GJT" /><!-- airport="Grand Junction" country="USA" -->
+			<xs:enumeration value="GRR" /><!-- airport="Grand Rapids" country="USA" -->
+			<xs:enumeration value="GPZ" /><!-- airport="Grand Rapids" country="USA" -->
+			<xs:enumeration value="GRZ" /><!-- airport="Graz" country="Austria" -->
+			<xs:enumeration value="GTF" /><!-- airport="Great Falls" country="USA" -->
+			<xs:enumeration value="GKL" /><!-- airport="Great Keppel Island" country="Australia" -->
+			<xs:enumeration value="GRB" /><!-- airport="Green Bay" country="USA" -->
+			<xs:enumeration value="LWB" /><!-- airport="Greenbrier/Lewisburg" country="USA" -->
+			<xs:enumeration value="GSO" /><!-- airport="Greensboro/Winston Salem" country="USA" -->
+			<xs:enumeration value="GLH" /><!-- airport="Greenville" country="USA" -->
+			<xs:enumeration value="PGV" /><!-- airport="Greenville" country="USA" -->
+			<xs:enumeration value="GSP" /><!-- airport="Greenville/Spartanburg" country="USA" -->
+			<xs:enumeration value="GND" /><!-- airport="Grenada" country="Grenada" -->
+			<xs:enumeration value="GNB" /><!-- airport="Grenoble" country="France" -->
+			<xs:enumeration value="GFF" /><!-- airport="Griffith" country="Australia" -->
+			<xs:enumeration value="GTE" /><!-- airport="Groote Eyeland" country="Australia" -->
+			<xs:enumeration value="GTI" /><!-- airport="Groote Eylandt" country="Australia" -->
+			<xs:enumeration value="GON" /><!-- airport="Groton/New London" country="USA" -->
+			<xs:enumeration value="GDL" /><!-- airport="Guadalajara" country="Mexico" -->
+			<xs:enumeration value="GSI" /><!-- airport="Guadalcanal" country="Solomon Islands" -->
+			<xs:enumeration value="GUM" /><!-- airport="Guam" country="Guam" -->
+			<xs:enumeration value="GRU" /><!-- airport="Guarulhos Int'l - Sao Paulo" country="Brazil" -->
+			<xs:enumeration value="GUA" /><!-- airport="Guatemala City" country="Guatemala" -->
+			<xs:enumeration value="GYE" /><!-- airport="Guayaquil" country="Ecuador" -->
+			<xs:enumeration value="GCI" /><!-- airport="Guernsey" country="United Kingdom" -->
+			<xs:enumeration value="GPT" /><!-- airport="Gulfport/Biloxi" country="USA" -->
+			<xs:enumeration value="ULU" /><!-- airport="Gulu" country="Uganda" -->
+			<xs:enumeration value="GUC" /><!-- airport="Gunnison/Crested Butte" country="USA" -->
+			<xs:enumeration value="GAU" /><!-- airport="Guwahati" country="India" -->
+			<xs:enumeration value="GWD" /><!-- airport="Gwadar" country="Pakistan" -->
+			<xs:enumeration value="GWE" /><!-- airport="Gweru" country="Zimbabwe" -->
+			<xs:enumeration value="GYP" /><!-- airport="Gympie" country="Australia" -->
+			<xs:enumeration value="HAC" /><!-- airport="Hachijo Jima" country="Japan" -->
+			<xs:enumeration value="HFA" /><!-- airport="Haifa" country="Israel" -->
+			<xs:enumeration value="HNS" /><!-- airport="Haines" country="USA" -->
+			<xs:enumeration value="HKD" /><!-- airport="Hakodate" country="Japan" -->
+			<xs:enumeration value="YHZ" /><!-- airport="Halifax Int'l" country="Canada" -->
+			<xs:enumeration value="YUX" /><!-- airport="Hall Beach" country="Canada" -->
+			<xs:enumeration value="HAM" /><!-- airport="Hamburg - Fuhlsbuettel" country="Germany" -->
+			<xs:enumeration value="HLT" /><!-- airport="Hamilton" country="Australia" -->
+			<xs:enumeration value="YHM" /><!-- airport="Hamilton" country="Canada" -->
+			<xs:enumeration value="HTI" /><!-- airport="Hamilton Island" country="Australia" -->
+			<xs:enumeration value="HFT" /><!-- airport="Hammerfest" country="Norway" -->
+			<xs:enumeration value="CMX" /><!-- airport="Hancock" country="USA" -->
+			<xs:enumeration value="HAJ" /><!-- airport="Hannover" country="Germany" -->
+			<xs:enumeration value="HAN" /><!-- airport="Hanoi - Noibai" country="Viet Nam" -->
+			<xs:enumeration value="HRE" /><!-- airport="Harare" country="Zimbabwe" -->
+			<xs:enumeration value="HRL" /><!-- airport="Harlington/South Padre Island" country="USA" -->
+			<xs:enumeration value="YHR" /><!-- airport="Harrington Harbour, PQ" country="Canada" -->
+			<xs:enumeration value="HAR" /><!-- airport="Harrisburg" country="USA" -->
+			<xs:enumeration value="MDT" /><!-- airport="Harrisburg" country="USA" -->
+			<xs:enumeration value="BDL" /><!-- airport="Hartford" country="USA" -->
+			<xs:enumeration value="HDY" /><!-- airport="Hatyai (Hat Yai)" country="Thailand" -->
+			<xs:enumeration value="HAU" /><!-- airport="Haugesund" country="Norway" -->
+			<xs:enumeration value="HAV" /><!-- airport="Havana - Jos&#xC3;&#xA9; Mart&#xC3; Int'l" country="Cuba" -->
+			<xs:enumeration value="HVR" /><!-- airport="Havre" country="USA" -->
+			<xs:enumeration value="HIS" /><!-- airport="Hayman Island" country="Australia" -->
+			<xs:enumeration value="HLN" /><!-- airport="Helena" country="USA" -->
+			<xs:enumeration value="JHE" /><!-- airport="Helsingborg" country="Sweden" -->
+			<xs:enumeration value="HEL" /><!-- airport="Helsinki - Vantaa" country="Finland" -->
+			<xs:enumeration value="HER" /><!-- airport="Heraklion" country="Greece" -->
+			<xs:enumeration value="HMO" /><!-- airport="Hermosillo - Gen. Pesqueira Garcia" country="Mexico" -->
+			<xs:enumeration value="HVB" /><!-- airport="Hervey Bay" country="Australia" -->
+			<xs:enumeration value="HIB" /><!-- airport="Hibbing" country="USA" -->
+			<xs:enumeration value="HKY" /><!-- airport="Hickory" country="USA" -->
+			<xs:enumeration value="ITO" /><!-- airport="Hilo" country="USA" -->
+			<xs:enumeration value="HHH" /><!-- airport="Hilton Head Island" country="USA" -->
+			<xs:enumeration value="HNK" /><!-- airport="Hinchinbrook Island" country="Australia" -->
+			<xs:enumeration value="SGN" /><!-- airport="Ho Chi Minh City (Saigon)" country="Viet Nam" -->
+			<xs:enumeration value="HBA" /><!-- airport="Hobart" country="Australia" -->
+			<xs:enumeration value="HOQ" /><!-- airport="Hof" country="Germany" -->
+			<xs:enumeration value="HOG" /><!-- airport="Holguin" country="Cuba" -->
+			<xs:enumeration value="HMH" /><!-- airport="Home Hill" country="Australia" -->
+			<xs:enumeration value="HOM" /><!-- airport="Homer" country="USA" -->
+			<xs:enumeration value="HKG" /><!-- airport="Hong Kong - Int'l  (HKIA)" country="Hong Kong" -->
+			<xs:enumeration value="ZJK" /><!-- airport="Hong Kong - Chek Lap Kok" country="Hong Kong" -->
+			<xs:enumeration value="HIR" /><!-- airport="Honiara Henderson Int'l" country="Solomon Islands" -->
+			<xs:enumeration value="HNL" /><!-- airport="Honolulu" country="USA" -->
+			<xs:enumeration value="HNH" /><!-- airport="Hoonah" country="USA" -->
+			<xs:enumeration value="HOR" /><!-- airport="Horta" country="Portugal" -->
+			<xs:enumeration value="HOU" /><!-- airport="Houston" country="USA" -->
+			<xs:enumeration value="IAH" /><!-- airport="Houston" country="USA" -->
+			<xs:enumeration value="HUH" /><!-- airport="Huahine" country="French Polynesia" -->
+			<xs:enumeration value="HUX" /><!-- airport="Huatulco" country="Mexico" -->
+			<xs:enumeration value="HUI" /><!-- airport="Hue - Phu Bai" country="Viet Nam" -->
+			<xs:enumeration value="HUY" /><!-- airport="Humberside" country="United Kingdom" -->
+			<xs:enumeration value="HTS" /><!-- airport="Huntington" country="USA" -->
+			<xs:enumeration value="HSV" /><!-- airport="Huntsville" country="USA" -->
+			<xs:enumeration value="HRG" /><!-- airport="Hurghada Int'l" country="Egypt" -->
+			<xs:enumeration value="HON" /><!-- airport="Huron" country="USA" -->
+			<xs:enumeration value="HWN" /><!-- airport="Hwange National Park" country="Zimbabwe" -->
+			<xs:enumeration value="HYA" /><!-- airport="Hyannis" country="USA" -->
+			<xs:enumeration value="HYG" /><!-- airport="Hydaburg" country="USA" -->
+			<xs:enumeration value="HYD" /><!-- airport="Hyderabad - Begumpet" country="India" -->
+			<xs:enumeration value="HDD" /><!-- airport="Hyderabad" country="Pakistan" -->
+			<xs:enumeration value="IBZ" /><!-- airport="Ibiza" country="Ibiza/Spain" -->
+			<xs:enumeration value="IDA" /><!-- airport="Idaho Falls" country="USA" -->
+			<xs:enumeration value="ILP" /><!-- airport="Ile des Pins" country="New Caledonia" -->
+			<xs:enumeration value="IOU" /><!-- airport="Ile Ouen" country="New Caledonia" -->
+			<xs:enumeration value="ILI" /><!-- airport="Iliamna" country="USA" -->
+			<xs:enumeration value="IPL" /><!-- airport="Imperial" country="USA" -->
+			<xs:enumeration value="IVC" /><!-- airport="Incercargill" country="New Zealand" -->
+			<xs:enumeration value="IND" /><!-- airport="Indianapolis" country="USA" -->
+			<xs:enumeration value="IGH" /><!-- airport="Ingham" country="Australia" -->
+			<xs:enumeration value="IFL" /><!-- airport="Innisfail" country="Australia" -->
+			<xs:enumeration value="INN" /><!-- airport="Innsbruck - Kranebitten" country="Austria" -->
+			<xs:enumeration value="INL" /><!-- airport="International Falls" country="USA" -->
+			<xs:enumeration value="YEV" /><!-- airport="Inuvik" country="Canada" -->
+			<xs:enumeration value="IVC" /><!-- airport="Invercargill" country="New Zealand" -->
+			<xs:enumeration value="INV" /><!-- airport="Inverness" country="United Kingdom" -->
+			<xs:enumeration value="IYK" /><!-- airport="Inykern" country="USA" -->
+			<xs:enumeration value="YFB" /><!-- airport="Iqaluit (Frobisher Bay)" country="Canada" -->
+			<xs:enumeration value="IQT" /><!-- airport="Iquitos" country="Peru" -->
+			<xs:enumeration value="IKT" /><!-- airport="Irkutsk" country="Russia" -->
+			<xs:enumeration value="LSG" /><!-- airport="Ishigaki" country="Japan" -->
+			<xs:enumeration value="ISB" /><!-- airport="Islamabad - Islamabad Int'l" country="Pakistan" -->
+			<xs:enumeration value="IOM" /><!-- airport="Isle of Man" country="United Kingdom" -->
+			<xs:enumeration value="IST" /><!-- airport="Istanbul - Ataturk" country="Turkey" -->
+			<xs:enumeration value="ITH" /><!-- airport="Ithaca/Cortland" country="USA" -->
+			<xs:enumeration value="IVL" /><!-- airport="Ivalo" country="Finland" -->
+			<xs:enumeration value="ZIH" /><!-- airport="Ixtapa/Zihuatenejo" country="Mexico" -->
+			<xs:enumeration value="IZM" /><!-- airport="Izmir" country="Turkey" -->
+			<xs:enumeration value="JAC" /><!-- airport="Jackson Hole" country="USA" -->
+			<xs:enumeration value="JXN" /><!-- airport="Jackson" country="USA" -->
+			<xs:enumeration value="JAN" /><!-- airport="Jackson" country="USA" -->
+			<xs:enumeration value="MKL" /><!-- airport="Jackson" country="USA" -->
+			<xs:enumeration value="JAX" /><!-- airport="Jacksonville" country="USA" -->
+			<xs:enumeration value="OAJ" /><!-- airport="Jacksonville" country="USA" -->
+			<xs:enumeration value="JAG" /><!-- airport="Jacobabad" country="Pakistan" -->
+			<xs:enumeration value="JAI" /><!-- airport="Jaipur - Sanganeer" country="India" -->
+			<xs:enumeration value="HLP" /><!-- airport="Jakarta - Halim Perdanakusma" country="Indonesia" -->
+			<xs:enumeration value="JKT" /><!-- airport="Jakarta - Kemayoran" country="Indonesia" -->
+			<xs:enumeration value="CGK" /><!-- airport="Jakarta - Soekarno-Hatta" country="Indonesia" -->
+			<xs:enumeration value="JLR" /><!-- airport="Jalandhar" country="India" -->
+			<xs:enumeration value="JMS" /><!-- airport="Jamestown" country="USA" -->
+			<xs:enumeration value="JHW" /><!-- airport="Jamestown" country="USA" -->
+			<xs:enumeration value="IXW" /><!-- airport="Jamshedpur - Sonari" country="India" -->
+			<xs:enumeration value="JED" /><!-- airport="Jeddah - King Abdulaziz Int'l" country="Saudi Arabia" -->
+			<xs:enumeration value="XRY" /><!-- airport="Jerez de la Frontera/Cadiz" country="Spain" -->
+			<xs:enumeration value="JER" /><!-- airport="Jersey" country="United Kingdom" -->
+			<xs:enumeration value="JRS" /><!-- airport="Jerusalem" country="Israel" -->
+			<xs:enumeration value="JIW" /><!-- airport="Jiwani" country="Pakistan" -->
+			<xs:enumeration value="JCB" /><!-- airport="Joacaba" country="Brazil" -->
+			<xs:enumeration value="JPA" /><!-- airport="Joao Pessoa - Castro Pinto" country="Brazil" -->
+			<xs:enumeration value="JKG" /><!-- airport="Joenkoeping" country="Sweden" -->
+			<xs:enumeration value="JOE" /><!-- airport="Joensuu" country="Finland" -->
+			<xs:enumeration value="JNB" /><!-- airport="Johannesburg - Johannesburg Int'l" country="South Africa" -->
+			<xs:enumeration value="JST" /><!-- airport="Johnstown" country="USA" -->
+			<xs:enumeration value="JHB" /><!-- airport="Johore Bahru" country="Malaysia" -->
+			<xs:enumeration value="JLN" /><!-- airport="Joplin" country="USA" -->
+			<xs:enumeration value="GJN" /><!-- airport="Jounieh" country="Lebanon" -->
+			<xs:enumeration value="JNU" /><!-- airport="Juneau" country="USA" -->
+			<xs:enumeration value="JYV" /><!-- airport="Jyvaeskylae" country="Finland" -->
+			<xs:enumeration value="KBL" /><!-- airport="Kabul - Khwaja Rawash" country="Afghanistan" -->
+			<xs:enumeration value="KOJ" /><!-- airport="Kagoshima" country="Japan" -->
+			<xs:enumeration value="OGG" /><!-- airport="Kahului" country="USA" -->
+			<xs:enumeration value="KAJ" /><!-- airport="Kajaani" country="Finland" -->
+			<xs:enumeration value="KLX" /><!-- airport="Kalamata" country="Greece" -->
+			<xs:enumeration value="AZO" /><!-- airport="Kalamazoo/Battle Creek" country="USA" -->
+			<xs:enumeration value="KGI" /><!-- airport="Kalgoorlie" country="Australia" -->
+			<xs:enumeration value="FCA" /><!-- airport="Kalispell" country="USA" -->
+			<xs:enumeration value="KLR" /><!-- airport="Kalmar" country="Sweden" -->
+			<xs:enumeration value="KAN" /><!-- airport="Kano" country="Nigeria" -->
+			<xs:enumeration value="MUE" /><!-- airport="Kamuela" country="USA" -->
+			<xs:enumeration value="QJU" /><!-- airport="Kanpur" country="India" -->
+			<xs:enumeration value="MCI" /><!-- airport="Kansas City" country="USA" -->
+			<xs:enumeration value="KHH" /><!-- airport="Kaohsiung Int'l" country="Taiwan" -->
+			<xs:enumeration value="JHM" /><!-- airport="Kapalua West" country="USA" -->
+			<xs:enumeration value="KHI" /><!-- airport="Karachi - Quaid-E-Azam Int'l" country="Pakistan" -->
+			<xs:enumeration value="KSD" /><!-- airport="Karlstad" country="Sweden" -->
+			<xs:enumeration value="AOK" /><!-- airport="Karpathos" country="Greece" -->
+			<xs:enumeration value="KTA" /><!-- airport="Karratha" country="Australia" -->
+			<xs:enumeration value="KRB" /><!-- airport="Karumba" country="Australia" -->
+			<xs:enumeration value="KRP" /><!-- airport="Karup" country="Denmark" -->
+			<xs:enumeration value="ZKE" /><!-- airport="Kaschechawan, PQ" country="Canada" -->
+			<xs:enumeration value="KSL" /><!-- airport="Kassala" country="Sudan" -->
+			<xs:enumeration value="KTR" /><!-- airport="Katherine" country="Australia" -->
+			<xs:enumeration value="KTM" /><!-- airport="Kathmandu - Tribhuvan" country="Nepal" -->
+			<xs:enumeration value="MPA" /><!-- airport="Katima Mulilo/Mpacha" country="Namibia" -->
+			<xs:enumeration value="KHJ" /><!-- airport="Kauhajoki" country="Finland" -->
+			<xs:enumeration value="MKK" /><!-- airport="Kaunakakai" country="USA" -->
+			<xs:enumeration value="KVA" /><!-- airport="Kavalla" country="Greece" -->
+			<xs:enumeration value="KZN" /><!-- airport="Kazan (Ka San)" country="Russia" -->
+			<xs:enumeration value="KMP" /><!-- airport="Keetmanshoop" country="Namibia" -->
+			<xs:enumeration value="YLW" /><!-- airport="Kelowna, BC" country="Canada" -->
+			<xs:enumeration value="KEM" /><!-- airport="Kemi/Tornio" country="Finland" -->
+			<xs:enumeration value="ZNS" /><!-- airport="Kempten" country="Germany" -->
+			<xs:enumeration value="ENA" /><!-- airport="Kenai" country="USA" -->
+			<xs:enumeration value="KIR" /><!-- airport="Kerry County" country="Ireland" -->
+			<xs:enumeration value="KTN" /><!-- airport="Ketchikan" country="USA" -->
+			<xs:enumeration value="EYW" /><!-- airport="Key West" country="USA" -->
+			<xs:enumeration value="AHB" /><!-- airport="Khamis Mushayat" country="Saudi Arabia" -->
+			<xs:enumeration value="UVL" /><!-- airport="Kharga - New Valley" country="Egypt" -->
+			<xs:enumeration value="KRT" /><!-- airport="Khartoum" country="Sudan" -->
+			<xs:enumeration value="KDD" /><!-- airport="Khuzdar" country="Pakistan" -->
+			<xs:enumeration value="KEL" /><!-- airport="Kiel - Holtenau" country="Germany" -->
+			<xs:enumeration value="KBP" /><!-- airport="Kiev - Borispol" country="Ukraine" -->
+			<xs:enumeration value="IEV" /><!-- airport="Kiev - Zhulhany" country="Ukraine" -->
+			<xs:enumeration value="KGL" /><!-- airport="Kigali - Gregoire Kayibanda" country="Rwanda" -->
+			<xs:enumeration value="JRO" /><!-- airport="Kilimadjaro" country="Tanzania" -->
+			<xs:enumeration value="ILE" /><!-- airport="Killeem" country="USA" -->
+			<xs:enumeration value="KIM" /><!-- airport="Kimberley" country="South Africa" -->
+			<xs:enumeration value="KNS" /><!-- airport="King Island" country="King Island" -->
+			<xs:enumeration value="AKN" /><!-- airport="King Salomon" country="USA" -->
+			<xs:enumeration value="KGC" /><!-- airport="Kingscote" country="Australia" -->
+			<xs:enumeration value="KIN" /><!-- airport="Kingston - Norman Manley" country="Jamaica" -->
+			<xs:enumeration value="ISO" /><!-- airport="Kingston" country="USA" -->
+			<xs:enumeration value="FIH" /><!-- airport="Kinshasa - N'Djili" country="Congo (Zaire)" -->
+			<xs:enumeration value="KKN" /><!-- airport="Kirkenes" country="Norway" -->
+			<xs:enumeration value="KIK" /><!-- airport="Kirkuk" country="Iraq" -->
+			<xs:enumeration value="KRN" /><!-- airport="Kiruna" country="Sweden" -->
+			<xs:enumeration value="FKI" /><!-- airport="Kisangani" country="Zaire" -->
+			<xs:enumeration value="KTT" /><!-- airport="Kittilae" country="Sweden" -->
+			<xs:enumeration value="KIW" /><!-- airport="Kitwe" country="Zambia" -->
+			<xs:enumeration value="KLU" /><!-- airport="Klagenfurt" country="Austria" -->
+			<xs:enumeration value="LMT" /><!-- airport="Klamath Fall" country="USA" -->
+			<xs:enumeration value="KLW" /><!-- airport="Klawock" country="USA" -->
+			<xs:enumeration value="KLZ" /><!-- airport="Kleinsee" country="South Africa" -->
+			<xs:enumeration value="NOC" /><!-- airport="Knock" country="Ireland" -->
+			<xs:enumeration value="TYS" /><!-- airport="Knoxville" country="USA" -->
+			<xs:enumeration value="UKB" /><!-- airport="Kobe" country="Japan" -->
+			<xs:enumeration value="KCZ" /><!-- airport="Kochi" country="Japan" -->
+			<xs:enumeration value="CGN" /><!-- airport="K&#xC3;&#xB6;ln, K&#xC3;&#xB6;ln/Bonn" country="Germany" -->
+			<xs:enumeration value="ADQ" /><!-- airport="Kodiak" country="USA" -->
+			<xs:enumeration value="OHT" /><!-- airport="Kohat" country="Pakistan" -->
+			<xs:enumeration value="KOK" /><!-- airport="Kokkola/Pietarsaari" country="Finland" -->
+			<xs:enumeration value="CCU" /><!-- airport="Kolkata (Calcutta) - Netaji Subhas Chandra" country="India" -->
+			<xs:enumeration value="KOA" /><!-- airport="Kona" country="USA" -->
+			<xs:enumeration value="HGO" /><!-- airport="Korhogo" country="Ivory Coast" -->
+			<xs:enumeration value="KGS" /><!-- airport="Kos" country="Greece" -->
+			<xs:enumeration value="BKI" /><!-- airport="Kota Kinabalu" country="Malaysia" -->
+			<xs:enumeration value="OTZ" /><!-- airport="Kotzbue" country="USA" -->
+			<xs:enumeration value="KWM" /><!-- airport="Kowanyama" country="Australia" -->
+			<xs:enumeration value="KRK" /><!-- airport="Krakau" country="Poland" -->
+			<xs:enumeration value="KRS" /><!-- airport="Kristiansand" country="Norway" -->
+			<xs:enumeration value="KID" /><!-- airport="Kristianstad" country="Sweden" -->
+			<xs:enumeration value="KSU" /><!-- airport="Kristiansund" country="Norway" -->
+			<xs:enumeration value="KUB" /><!-- airport="Kuala Belait" country="Brunei" -->
+			<xs:enumeration value="KUL" /><!-- airport="Kuala Lumpur - Int'l " country="Malaysia" -->
+			<xs:enumeration value="SZB" /><!-- airport="Kuala Lumpur - Sultan Abdul Aziz Shah" country="Malaysia" -->
+			<xs:enumeration value="KUA" /><!-- airport="Kuantan" country="Malaysia" -->
+			<xs:enumeration value="KCH" /><!-- airport="Kuching" country="Malaysia" -->
+			<xs:enumeration value="KMJ" /><!-- airport="Kumamoto" country="Japan" -->
+			<xs:enumeration value="KNX" /><!-- airport="Kununurra" country="Australia" -->
+			<xs:enumeration value="KUO" /><!-- airport="Kuopio" country="Finland" -->
+			<xs:enumeration value="KUH" /><!-- airport="Kushiro" country="Japan" -->
+			<xs:enumeration value="YVP" /><!-- airport="Kuujjuaq (FortChimo)" country="Canada" -->
+			<xs:enumeration value="YGW" /><!-- airport="Kuujjuarapik" country="Canada" -->
+			<xs:enumeration value="KAO" /><!-- airport="Kuusamo" country="Finland" -->
+			<xs:enumeration value="KWI" /><!-- airport="Kuwait - Kuwait Int'l" country="Kuwait" -->
+			<xs:enumeration value="UKY" /><!-- airport="Kyoto" country="Japan" -->
+			<xs:enumeration value="LEK" /><!-- airport="Labe" country="Guinea" -->
+			<xs:enumeration value="WLB" /><!-- airport="Labouchere Bay" country="USA" -->
+			<xs:enumeration value="LBU" /><!-- airport="Labuan" country="Malaysia" -->
+			<xs:enumeration value="XLB" /><!-- airport="Lac Brochet, MB" country="Canada" -->
+			<xs:enumeration value="LCG" /><!-- airport="La Coruna" country="Spain" -->
+			<xs:enumeration value="LSE" /><!-- airport="La Crosse" country="USA" -->
+			<xs:enumeration value="LAE" /><!-- airport="Lae" country="Papua New Guinea" -->
+			<xs:enumeration value="LRH" /><!-- airport="La Rochelle" country="France" -->
+			<xs:enumeration value="LAF" /><!-- airport="Lafayette" country="USA" -->
+			<xs:enumeration value="LFT" /><!-- airport="Lafayette" country="USA" -->
+			<xs:enumeration value="LOS" /><!-- airport="Lagos - Murtala Muhammed" country="Nigeria" -->
+			<xs:enumeration value="YGL" /><!-- airport="La Grande" country="Canada" -->
+			<xs:enumeration value="LHE" /><!-- airport="Lahore" country="Pakistan" -->
+			<xs:enumeration value="LCH" /><!-- airport="Lake Charles" country="USA" -->
+			<xs:enumeration value="HII" /><!-- airport="Lake Havasu City" country="USA" -->
+			<xs:enumeration value="TVL" /><!-- airport="Lake Tahoe" country="USA" -->
+			<xs:enumeration value="LKL" /><!-- airport="Lakselv" country="Norway" -->
+			<xs:enumeration value="LBQ" /><!-- airport="Lambarene" country="Gabon" -->
+			<xs:enumeration value="SUF" /><!-- airport="Lamezia Terme" country="Italy" -->
+			<xs:enumeration value="LMP" /><!-- airport="Lampedusa" country="Italy" -->
+			<xs:enumeration value="LNY" /><!-- airport="Lanai City" country="USA" -->
+			<xs:enumeration value="LNS" /><!-- airport="Lancaster" country="USA" -->
+			<xs:enumeration value="LGK" /><!-- airport="Langkawi" country="Malaysia" -->
+			<xs:enumeration value="LAI" /><!-- airport="Lannion" country="France" -->
+			<xs:enumeration value="HLA" /><!-- airport="Lanseria" country="South Africa" -->
+			<xs:enumeration value="LAN" /><!-- airport="Lansing" country="USA" -->
+			<xs:enumeration value="LPB" /><!-- airport="La Paz - El Alto" country="Bolivia" -->
+			<xs:enumeration value="LAP" /><!-- airport="La Paz - Leon" country="Mexico" -->
+			<xs:enumeration value="LPP" /><!-- airport="Lappeenranta" country="Finland" -->
+			<xs:enumeration value="LAR" /><!-- airport="Laramie" country="USA" -->
+			<xs:enumeration value="LRD" /><!-- airport="Laredo" country="USA" -->
+			<xs:enumeration value="LCA" /><!-- airport="Larnaca" country="Cyprus" -->
+			<xs:enumeration value="LPA" /><!-- airport="Las Palmas" country="Spain" -->
+			<xs:enumeration value="LAS" /><!-- airport="Las Vegas" country="USA" -->
+			<xs:enumeration value="LBE" /><!-- airport="Latrobe" country="USA" -->
+			<xs:enumeration value="LST" /><!-- airport="Launceston" country="Australia" -->
+			<xs:enumeration value="PIB" /><!-- airport="Laurel/Hattisburg" country="USA" -->
+			<xs:enumeration value="LVO" /><!-- airport="Laverton" country="Australia" -->
+			<xs:enumeration value="LAW" /><!-- airport="Lawton" country="USA" -->
+			<xs:enumeration value="LZC" /><!-- airport="Lazaro Cardenas" country="Mexico" -->
+			<xs:enumeration value="YLR" /><!-- airport="Leaf Rapids" country="Canada" -->
+			<xs:enumeration value="LEA" /><!-- airport="Learmouth (Exmouth)" country="Australia" -->
+			<xs:enumeration value="LEB" /><!-- airport="Lebanon" country="USA" -->
+			<xs:enumeration value="LBA" /><!-- airport="Leeds/Bradford" country="United Kingdom" -->
+			<xs:enumeration value="LER" /><!-- airport="Leinster" country="Australia" -->
+			<xs:enumeration value="LEJ" /><!-- airport="Leipzig" country="Germany" -->
+			<xs:enumeration value="BJX" /><!-- airport="Leon" country="Mexico" -->
+			<xs:enumeration value="LNO" /><!-- airport="Leonora" country="Australia" -->
+			<xs:enumeration value="LWS" /><!-- airport="Lewiston" country="USA" -->
+			<xs:enumeration value="LWT" /><!-- airport="Lewistown" country="USA" -->
+			<xs:enumeration value="LEX" /><!-- airport="Lexington" country="USA" -->
+			<xs:enumeration value="LBV" /><!-- airport="Libreville" country="Gabon" -->
+			<xs:enumeration value="LDK" /><!-- airport="Lidkoeping" country="Sweden" -->
+			<xs:enumeration value="LGG" /><!-- airport="Liege" country="Belgium" -->
+			<xs:enumeration value="Pazifik&quot;" /><!-- airport="Lifou" country="&quot;Loyaute" -->
+			<xs:enumeration value="LIH" /><!-- airport="Lihue" country="USA" -->
+			<xs:enumeration value="LIL" /><!-- airport="Lille" country="France" -->
+			<xs:enumeration value="LLW" /><!-- airport="Lilongwe - Lilongwe International" country="Malawi" -->
+			<xs:enumeration value="LIM" /><!-- airport="Lima - J Chavez Int'l" country="Peru" -->
+			<xs:enumeration value="QLI" /><!-- airport="Limassol" country="Cyprus" -->
+			<xs:enumeration value="LIG" /><!-- airport="Limoges" country="France" -->
+			<xs:enumeration value="LNK" /><!-- airport="Lincoln" country="USA" -->
+			<xs:enumeration value="LDC" /><!-- airport="Lindeman Island" country="Australia" -->
+			<xs:enumeration value="LNZ" /><!-- airport="Linz - Hoersching" country="Austria" -->
+			<xs:enumeration value="Democratic Republic of The&quot;" /><!-- airport="Lisala" country="&quot;Congo" -->
+			<xs:enumeration value="LIS" /><!-- airport="Lisbon - Lisboa" country="Portugal" -->
+			<xs:enumeration value="LSY" /><!-- airport="Lismore" country="Australia" -->
+			<xs:enumeration value="LIT" /><!-- airport="Little Rock" country="USA" -->
+			<xs:enumeration value="LPL" /><!-- airport="Liverpool" country="United Kingdom" -->
+			<xs:enumeration value="LZR" /><!-- airport="Lizard Island" country="Australia" -->
+			<xs:enumeration value="LJU" /><!-- airport="Ljubljana - Brnik" country="Slovenia" -->
+			<xs:enumeration value="IRG" /><!-- airport="Lockhart River" country="Australia" -->
+			<xs:enumeration value="LFW" /><!-- airport="Lome" country="Togo" -->
+			<xs:enumeration value="YXU" /><!-- airport="London" country="Canada" -->
+			<xs:enumeration value="LON" /><!-- airport="London" country="United Kingdom" -->
+			<xs:enumeration value="LCY" /><!-- airport="London - City " country="United Kingdom" -->
+			<xs:enumeration value="LGW" /><!-- airport="London - Gatwick" country="United Kingdom" -->
+			<xs:enumeration value="LHR" /><!-- airport="London - Heathrow" country="United Kingdom" -->
+			<xs:enumeration value="LTN" /><!-- airport="London - Luton" country="United Kingdom" -->
+			<xs:enumeration value="STN" /><!-- airport="London - Stansted" country="United Kingdom" -->
+			<xs:enumeration value="LGB" /><!-- airport="Long Beach" country="USA" -->
+			<xs:enumeration value="LIJ" /><!-- airport="Long Island" country="USA" -->
+			<xs:enumeration value="ISP" /><!-- airport="Long Island" country="USA" -->
+			<xs:enumeration value="LRE" /><!-- airport="Longreach" country="Australia" -->
+			<xs:enumeration value="GGG" /><!-- airport="Longview/Kilgore" country="USA" -->
+			<xs:enumeration value="LYR" /><!-- airport="Longyearbyen - Svalbard" country="Svalbard/Norway" -->
+			<xs:enumeration value="LTO" /><!-- airport="Loreto" country="Mexico" -->
+			<xs:enumeration value="LRT" /><!-- airport="Lorient" country="France" -->
+			<xs:enumeration value="LAX" /><!-- airport="Los Angeles" country="USA" -->
+			<xs:enumeration value="SJD" /><!-- airport="Los Cabos" country="Mexico" -->
+			<xs:enumeration value="LMM" /><!-- airport="Los Mochis" country="Mexico" -->
+			<xs:enumeration value="TFN" /><!-- airport="Los Rodeos" country="Teneriffa/Spain" -->
+			<xs:enumeration value="LSZ" /><!-- airport="(Mali) Losinj - Losinj Arpt" country="Croatia (Hrvatska)" -->
+			<xs:enumeration value="LDE" /><!-- airport="Lourdes/Tarbes" country="France" -->
+			<xs:enumeration value="SDF" /><!-- airport="Louisville" country="USA" -->
+			<xs:enumeration value="LAD" /><!-- airport="Luanda - 4 de Fevereiro" country="Angola" -->
+			<xs:enumeration value="LBB" /><!-- airport="Lubbock" country="USA" -->
+			<xs:enumeration value="LKO" /><!-- airport="Lucknow" country="India" -->
+			<xs:enumeration value="LUD" /><!-- airport="Luederitz" country="Namibia" -->
+			<xs:enumeration value="MLA" /><!-- airport="Luga" country="Malta" -->
+			<xs:enumeration value="LUG" /><!-- airport="Lugano" country="Switzerland" -->
+			<xs:enumeration value="LLA" /><!-- airport="Lulea" country="Sweden" -->
+			<xs:enumeration value="FBM" /><!-- airport="Lumbumbashi" country="Zaire" -->
+			<xs:enumeration value="LUN" /><!-- airport="Lusaka" country="Zambia" -->
+			<xs:enumeration value="LUJ" /><!-- airport="Lusisiki" country="South Africa" -->
+			<xs:enumeration value="LUX" /><!-- airport="Luxembourg" country="Luxembourg" -->
+			<xs:enumeration value="LXR" /><!-- airport="Luxor" country="Egypt" -->
+			<xs:enumeration value="LWO" /><!-- airport="Lvov (Lwow, Lemberg)" country="Ukraine" -->
+			<xs:enumeration value="LYH" /><!-- airport="Lynchburg" country="USA" -->
+			<xs:enumeration value="LYS" /><!-- airport="Lyon" country="France" -->
+			<xs:enumeration value="MST" /><!-- airport="Maastricht/Aachen" country="Netherlands" -->
+			<xs:enumeration value="MCP" /><!-- airport="Macapa" country="Brazil" -->
+			<xs:enumeration value="MCZ" /><!-- airport="Maceio" country="Brazil" -->
+			<xs:enumeration value="MKY" /><!-- airport="Mackay" country="Australia" -->
+			<xs:enumeration value="MCN" /><!-- airport="Macon" country="USA" -->
+			<xs:enumeration value="NOP" /><!-- airport="Mactan Island - Nab" country="Philippines" -->
+			<xs:enumeration value="MSN" /><!-- airport="Madison" country="USA" -->
+			<xs:enumeration value="MAA" /><!-- airport="Madras (Chennai)" country="India" -->
+			<xs:enumeration value="MAD" /><!-- airport="Madrid - Barajas" country="Spain" -->
+			<xs:enumeration value="SEZ" /><!-- airport="Mahe - Seychelles Int'l" country="Seychelles" -->
+			<xs:enumeration value="MAH" /><!-- airport="Mahon" country="Spain" -->
+			<xs:enumeration value="MTL" /><!-- airport="Maitland" country="Australia" -->
+			<xs:enumeration value="MJN" /><!-- airport="Majunga" country="Madagascar" -->
+			<xs:enumeration value="MZG" /><!-- airport="Makung" country="Taiwan" -->
+			<xs:enumeration value="SSG" /><!-- airport="Malabo" country="Equatorial Guinea" -->
+			<xs:enumeration value="AGP" /><!-- airport="Malaga" country="Spain" -->
+			<xs:enumeration value="MLE" /><!-- airport="Male - International" country="Maledives" -->
+			<xs:enumeration value="MYD" /><!-- airport="Malindi" country="Kenya" -->
+			<xs:enumeration value="MMA" /><!-- airport="Malmo (Malmoe)" country="Sweden" -->
+			<xs:enumeration value="MMX" /><!-- airport="Malmo (Malmoe) - Sturup" country="Sweden" -->
+			<xs:enumeration value="MJC" /><!-- airport="Man" country="Ivory Coast" -->
+			<xs:enumeration value="MGA" /><!-- airport="Managua - Augusto C Sandino" country="Nicaragua" -->
+			<xs:enumeration value="MAO" /><!-- airport="Manaus" country="Brazil" -->
+			<xs:enumeration value="MAN" /><!-- airport="Manchester" country="United Kingdom" -->
+			<xs:enumeration value="MHT" /><!-- airport="Manchester" country="USA" -->
+			<xs:enumeration value="MFO" /><!-- airport="Manguna" country="Papua New Guinea" -->
+			<xs:enumeration value="XMH" /><!-- airport="Manihi" country="French Polynesia" -->
+			<xs:enumeration value="MNL" /><!-- airport="Manila - Ninoy Aquino Int'l" country="Philippines" -->
+			<xs:enumeration value="ZLO" /><!-- airport="Manzanillo" country="Mexico" -->
+			<xs:enumeration value="MTS" /><!-- airport="Manzini - Matsapha Int'l" country="Swaziland" -->
+			<xs:enumeration value="MPM" /><!-- airport="Maputo - Maputo International" country="Mozambique" -->
+			<xs:enumeration value="MDQ" /><!-- airport="Mar del Plata" country="Argentina" -->
+			<xs:enumeration value="MAR" /><!-- airport="Maracaibo - La Chinita" country="Venezuela" -->
+			<xs:enumeration value="MFQ" /><!-- airport="Maradi" country="Niger" -->
+			<xs:enumeration value="MTH" /><!-- airport="Marathon" country="USA" -->
+			<xs:enumeration value="MEE" /><!-- airport="Mare" country="New Caledonia" -->
+			<xs:enumeration value="MGH" /><!-- airport="Margate" country="South Africa" -->
+			<xs:enumeration value="PMV" /><!-- airport="Margerita" country="Venezuela" -->
+			<xs:enumeration value="MBX" /><!-- airport="Maribor" country="Slovenia" -->
+			<xs:enumeration value="MHQ" /><!-- airport="Mariehamn (Maarianhamina)" country="Finland" -->
+			<xs:enumeration value="MVR" /><!-- airport="Maroua" country="Cameroon" -->
+			<xs:enumeration value="MQT" /><!-- airport="Marquette" country="USA" -->
+			<xs:enumeration value="RAK" /><!-- airport="Marrakech - Menara" country="Morocco" -->
+			<xs:enumeration value="MUH" /><!-- airport="Marsa Matrah (Marsa Matruh)" country="Egypt" -->
+			<xs:enumeration value="MRS" /><!-- airport="Marseille" country="France" -->
+			<xs:enumeration value="MHH" /><!-- airport="Marsh Harbour" country="Bahamas" -->
+			<xs:enumeration value="MVY" /><!-- airport="Martha's Vineyard" country="USA" -->
+			<xs:enumeration value="MBH" /><!-- airport="Maryborough" country="Australia" -->
+			<xs:enumeration value="MSU" /><!-- airport="Maseru - Moshoeshoe Int'l" country="Lesotho" -->
+			<xs:enumeration value="MCW" /><!-- airport="Mason City" country="USA" -->
+			<xs:enumeration value="MVZ" /><!-- airport="Masvingo" country="Zimbabwe" -->
+			<xs:enumeration value="MMJ" /><!-- airport="Matsumoto, Nagano" country="Japan" -->
+			<xs:enumeration value="MYJ" /><!-- airport="Matsuyama" country="Japan" -->
+			<xs:enumeration value="MTO" /><!-- airport="Mattoon" country="USA" -->
+			<xs:enumeration value="MUB" /><!-- airport="Maun" country="Botswana" -->
+			<xs:enumeration value="MAU" /><!-- airport="Maupiti" country="French Polynesia" -->
+			<xs:enumeration value="MRU" /><!-- airport="Mauritius - S.Seewoosagur Ram Int'l" country="Mauritius" -->
+			<xs:enumeration value="MAZ" /><!-- airport="Mayaguez" country="Puerto Rico" -->
+			<xs:enumeration value="MZT" /><!-- airport="Mazatlan" country="Mexico" -->
+			<xs:enumeration value="MFE" /><!-- airport="McAllen" country="USA" -->
+			<xs:enumeration value="MES" /><!-- airport="Medan" country="Indonesia" -->
+			<xs:enumeration value="MDE" /><!-- airport="Medellin" country="Colombia" -->
+			<xs:enumeration value="MFR" /><!-- airport="Medford" country="USA" -->
+			<xs:enumeration value="MED" /><!-- airport="Medina" country="Saudi Arabia" -->
+			<xs:enumeration value="MKR" /><!-- airport="Meekatharra" country="Australia" -->
+			<xs:enumeration value="MEL" /><!-- airport="Melbourne - Tullamarine" country="Australia" -->
+			<xs:enumeration value="MLB" /><!-- airport="Melbourne" country="USA" -->
+			<xs:enumeration value="MEM" /><!-- airport="Memphis" country="USA" -->
+			<xs:enumeration value="MDZ" /><!-- airport="Mendoza" country="Argentina" -->
+			<xs:enumeration value="MDC" /><!-- airport="Manado" country="Indonesia" -->
+			<xs:enumeration value="MCE" /><!-- airport="Merced" country="USA" -->
+			<xs:enumeration value="MID" /><!-- airport="Merida" country="Mexico" -->
+			<xs:enumeration value="MEI" /><!-- airport="Meridian" country="USA" -->
+			<xs:enumeration value="MIM" /><!-- airport="Merimbula" country="Australia" -->
+			<xs:enumeration value="MEZ" /><!-- airport="Messina" country="South Africa" -->
+			<xs:enumeration value="MTM" /><!-- airport="Metlakatla" country="USA" -->
+			<xs:enumeration value="MZM" /><!-- airport="Metz" country="France" -->
+			<xs:enumeration value="MXL" /><!-- airport="Mexicali" country="Mexico" -->
+			<xs:enumeration value="MEX" /><!-- airport="Mexico City" country="Mexico" -->
+			<xs:enumeration value="MEX" /><!-- airport="Mexico City - Juarez International" country="Mexico" -->
+			<xs:enumeration value="MFU" /><!-- airport="Mfuwe" country="Zambia" -->
+			<xs:enumeration value="MIA" /><!-- airport="Miami" country="USA" -->
+			<xs:enumeration value="MWD" /><!-- airport="Mianwali" country="Pakistan" -->
+			<xs:enumeration value="MMM" /><!-- airport="Middlemount" country="Australia" -->
+			<xs:enumeration value="MAF" /><!-- airport="Midland/Odessa" country="USA" -->
+			<xs:enumeration value="MIK" /><!-- airport="Mikkeli" country="Finland" -->
+			<xs:enumeration value="MIL" /><!-- airport="Milan" country="Italy" -->
+			<xs:enumeration value="LIN" /><!-- airport="Milan - Linate" country="Italy" -->
+			<xs:enumeration value="MXP" /><!-- airport="Milan - Malpensa" country="Italy" -->
+			<xs:enumeration value="BGY" /><!-- airport="Milan - Orio Al Serio" country="Italy" -->
+			<xs:enumeration value="MQL" /><!-- airport="Mildura" country="Australia" -->
+			<xs:enumeration value="MLS" /><!-- airport="Miles City" country="USA" -->
+			<xs:enumeration value="MFN" /><!-- airport="Milford Sound" country="New Zealand" -->
+			<xs:enumeration value="MKE" /><!-- airport="Milwaukee" country="USA" -->
+			<xs:enumeration value="MTT" /><!-- airport="Minatitlan" country="Mexico" -->
+			<xs:enumeration value="MRV" /><!-- airport="Mineralnye Vody" country="Russia" -->
+			<xs:enumeration value="MSP" /><!-- airport="Minneapolis - St. Paul Int'l" country="USA" -->
+			<xs:enumeration value="MOT" /><!-- airport="Minot" country="USA" -->
+			<xs:enumeration value="MSQ" /><!-- airport="Minsk, International" country="Belarus" -->
+			<xs:enumeration value="MYY" /><!-- airport="Miri" country="Malaysia" -->
+			<xs:enumeration value="QML" /><!-- airport="Mirpur" country="Pakistan" -->
+			<xs:enumeration value="MSO" /><!-- airport="Missula" country="USA" -->
+			<xs:enumeration value="MHE" /><!-- airport="Mitchell" country="USA" -->
+			<xs:enumeration value="MMY" /><!-- airport="Miyako Jima (Ryuku Islands) - Hirara" country="Japan" -->
+			<xs:enumeration value="MBM" /><!-- airport="Mkambati" country="South Africa" -->
+			<xs:enumeration value="MFF" /><!-- airport="Moanda" country="Gabon" -->
+			<xs:enumeration value="MOB" /><!-- airport="Mobile" country="USA" -->
+			<xs:enumeration value="MOD" /><!-- airport="Modesto" country="USA" -->
+			<xs:enumeration value="MJD" /><!-- airport="Moenjodaro" country="Pakistan" -->
+			<xs:enumeration value="MGQ" /><!-- airport="Mogadischu" country="Somalia" -->
+			<xs:enumeration value="OKU" /><!-- airport="Mokuti" country="Namibia" -->
+			<xs:enumeration value="MLI" /><!-- airport="Moline/Quad Cities" country="USA" -->
+			<xs:enumeration value="MBA" /><!-- airport="Mombasa - Moi International" country="Kenya" -->
+			<xs:enumeration value="MIR" /><!-- airport="Monastir" country="Tunisia" -->
+			<xs:enumeration value="MLU" /><!-- airport="Monroe" country="USA" -->
+			<xs:enumeration value="MLW" /><!-- airport="Monrovia" country="Liberia" -->
+			<xs:enumeration value="ROB" /><!-- airport="Monrovia - Roberts Int'l" country="Liberia" -->
+			<xs:enumeration value="MBJ" /><!-- airport="Montenego Bay" country="Jamaica" -->
+			<xs:enumeration value="QGF" /><!-- airport="Montenegro" country="Brazil" -->
+			<xs:enumeration value="MRY" /><!-- airport="Monterey" country="USA" -->
+			<xs:enumeration value="MTY" /><!-- airport="Monterrey" country="Mexico" -->
+			<xs:enumeration value="NTR" /><!-- airport="Monterrey - Aeropuerto Del Norte" country="Mexico" -->
+			<xs:enumeration value="MVD" /><!-- airport="Montevideo - Carrasco" country="Uruguay" -->
+			<xs:enumeration value="MGM" /><!-- airport="Montgomery" country="USA" -->
+			<xs:enumeration value="MPL" /><!-- airport="Montpellier - Frejorgues" country="France" -->
+			<xs:enumeration value="YMQ" /><!-- airport="Montreal" country="Canada" -->
+			<xs:enumeration value="YUL" /><!-- airport="Montreal - Dorval" country="Canada" -->
+			<xs:enumeration value="YMX" /><!-- airport="Montreal - Mirabel" country="Canada" -->
+			<xs:enumeration value="MTJ" /><!-- airport="Montrose/Tellruide" country="USA" -->
+			<xs:enumeration value="MOZ" /><!-- airport="Moorea" country="French Polynesia" -->
+			<xs:enumeration value="MOV" /><!-- airport="Moranbah" country="Australia" -->
+			<xs:enumeration value="MRZ" /><!-- airport="Moree" country="Australia" -->
+			<xs:enumeration value="MLM" /><!-- airport="Morelia" country="Mexico" -->
+			<xs:enumeration value="MGW" /><!-- airport="Morgantown" country="USA" -->
+			<xs:enumeration value="HNA" /><!-- airport="Morioka, Hanamaki" country="Japan" -->
+			<xs:enumeration value="HAH" /><!-- airport="Moroni - Prince Said Ibrahim" country="Comoros (Comores)" -->
+			<xs:enumeration value="YVA" /><!-- airport="Moroni - Iconi" country="Comoros (Comores)" -->
+			<xs:enumeration value="MOW" /><!-- airport="Moscow - Metropolitan Area" country="Russia" -->
+			<xs:enumeration value="DME" /><!-- airport="Moscow - Domodedovo" country="Russia" -->
+			<xs:enumeration value="SVO" /><!-- airport="Moscow - Sheremetyevo" country="Russia" -->
+			<xs:enumeration value="VKO" /><!-- airport="Moscow - Vnukovo" country="Russia" -->
+			<xs:enumeration value="MWH" /><!-- airport="Moses Lake" country="USA" -->
+			<xs:enumeration value="OMO" /><!-- airport="Mostar" country="Bosnia and Herzegovina" -->
+			<xs:enumeration value="OSM" /><!-- airport="Mosul" country="Iraq" -->
+			<xs:enumeration value="MJL" /><!-- airport="Mouila" country="Gabon" -->
+			<xs:enumeration value="MQQ" /><!-- airport="Moundou" country="Chad" -->
+			<xs:enumeration value="GTN" /><!-- airport="Mount Cook" country="New Zealand" -->
+			<xs:enumeration value="MGB" /><!-- airport="Mount Gambier" country="Australia" -->
+			<xs:enumeration value="MMG" /><!-- airport="Mount Magnet" country="Australia" -->
+			<xs:enumeration value="ISA" /><!-- airport="Mt. Isa" country="Australia" -->
+			<xs:enumeration value="MCL" /><!-- airport="Mt. McKinley" country="USA" -->
+			<xs:enumeration value="MUC" /><!-- airport="Muenchen (Munich) - Franz Josef Strauss" country="Germany" -->
+			<xs:enumeration value="FMO" /><!-- airport="Muenster/Osnabrueck" country="Germany" -->
+			<xs:enumeration value="MSR" /><!-- airport="Muenster/Osnabrueck" country="Germany" -->
+			<xs:enumeration value="MLH" /><!-- airport="Mulhouse" country="France" -->
+			<xs:enumeration value="MUX" /><!-- airport="Multan" country="Pakistan" -->
+			<xs:enumeration value="MJV" /><!-- airport="Murcia" country="Spain" -->
+			<xs:enumeration value="MMK" /><!-- airport="Murmansk" country="Russia" -->
+			<xs:enumeration value="MCT" /><!-- airport="Muscat - Seeb" country="Oman" -->
+			<xs:enumeration value="MSL" /><!-- airport="Muscle Shoals" country="USA" -->
+			<xs:enumeration value="MKG" /><!-- airport="Muskegon" country="USA" -->
+			<xs:enumeration value="MFG" /><!-- airport="Muzaffarabad" country="Pakistan" -->
+			<xs:enumeration value="MVB" /><!-- airport="Mvengue" country="Gabon" -->
+			<xs:enumeration value="JMK" /><!-- airport="Mykonos" country="Greece" -->
+			<xs:enumeration value="MYR" /><!-- airport="Myrtle Beach" country="USA" -->
+			<xs:enumeration value="MJT" /><!-- airport="Mytilene (Lesbos)" country="Greece" -->
+			<xs:enumeration value="MZF" /><!-- airport="Mzamba" country="South Africa" -->
+			<xs:enumeration value="NAN" /><!-- airport="Nadi" country="Fiji" -->
+			<xs:enumeration value="NGS" /><!-- airport="Nagasaki" country="Japan" -->
+			<xs:enumeration value="NGO" /><!-- airport="Nagoya - Komaki AFB" country="Japan" -->
+			<xs:enumeration value="NAG" /><!-- airport="Nagpur" country="India" -->
+			<xs:enumeration value="NBO" /><!-- airport="Nairobi" country="Kenya" -->
+			<xs:enumeration value="ENC" /><!-- airport="Nancy" country="France" -->
+			<xs:enumeration value="YSR" /><!-- airport="Nanisivik" country="Canada" -->
+			<xs:enumeration value="NTE" /><!-- airport="Nantes" country="France" -->
+			<xs:enumeration value="ACK" /><!-- airport="Nantucket" country="USA" -->
+			<xs:enumeration value="NAP" /><!-- airport="Naples" country="Italy" -->
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
