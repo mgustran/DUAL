@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://www.edreams.es"
+ xmlns:ed="http://www.edreams.es"
+ elementFormDefault="unqualified"
+ attributeFormDefault="unqualified">
+ 
+ <xs:include schemaLocation="eDreams.xsd"></xs:include>
+ 
+	 <xs:element name="vuelo">
+	 	<xs:complexType>
+	 		<xs:sequence>
+	 			<xs:element name="billete" type="ed:billete">
+	 			</xs:element>
+	 		</xs:sequence>
+	 	</xs:complexType>
+	 </xs:element>
+ 
+	 <xs:complexType name="billete">
+	 	<xs:sequence>
+	 		<xs:element name="trayecto" type="ed:trayecto"></xs:element>
+	 		<xs:element name="fecha" type="ed:fecha"></xs:element>
+	 		<xs:element name="tipo" type="ed:tipo"></xs:element>
+	 	</xs:sequence>
+	 </xs:complexType>
+ 
+	 <xs:complexType name="trayecto">
+	 	<xs:sequence>
+	 		<xs:element name="origen" type="xs:string"></xs:element>
+	 		<xs:element name="destino" type="xs:string"></xs:element>
+	 		<xs:element name="soloIda" type="xs:boolean"></xs:element>
+	 	</xs:sequence>
+	 </xs:complexType>
+ 
+	 <xs:complexType name="fecha">
+	 	<xs:sequence>
+	 		<xs:element name="salida" type="xs:date"></xs:element>
+	 		<xs:element name="vuelta" type="xs:date"></xs:element>
+	 	</xs:sequence>
+	 </xs:complexType>
+	 
+	 <xs:complexType name="pasajeros">
+	 	<xs:sequence>
+	 		<xs:element name="adultos" type="ed:pasAdultos"></xs:element>
+	 		<xs:element name="infantes" type="ed:pasInfantes"></xs:element>
+	 		<xs:element name="bebes" type="ed:pasBebes"></xs:element>
+	 	</xs:sequence>
+	 </xs:complexType>
+ 
+	 <xs:complexType name="tipo">
+	 	<xs:choice>
+	 		<xs:element name="turista">
+	 			<xs:complexType></xs:complexType>
+	 		</xs:element>
+	 		 <xs:element name="business">
+	 			<xs:complexType></xs:complexType>
+	 		</xs:element>
+	 	</xs:choice>
+	 </xs:complexType>
+	 
+	 <xs:simpleType name="pasAdultos">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"></xs:minInclusive>
+			<xs:maxInclusive value="9"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="pasInfantes">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9]"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="pasBebes">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9]"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="equipajeMano">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-2]"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="equipajeFact">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-4]"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	 
+	 <xs:complexType name="extPasajeros">
+		<xs:complexContent>
+			<xs:extension base="ed:pasajeros">
+				<xs:sequence>
+					<xs:element name="equipajeMano" type="xs:integer"></xs:element>
+					<xs:element name="equipajeFact" type="xs:integer"></xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+ 
+ 
+</xs:schema>
