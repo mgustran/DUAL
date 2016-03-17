@@ -3,15 +3,8 @@ package figuras;
 import draw.Drawable;
 
 public class Circulo extends FiguraGeometrica implements Drawable {
-	private String name = "Circulo";
 	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	private double radio = 0d;
 	// el valor de la propiedad PI no puede variar => final
 	private final double PI = Math.PI;
@@ -38,11 +31,11 @@ public class Circulo extends FiguraGeometrica implements Drawable {
 		return PI * Math.pow(this.radio, 2);
 	}
 	public void draw() {
-		System.out.println(getName() + "  is drawed.");
+		System.out.println(getNombre() + "  is drawed.");
 	}
 	
 	public void applyTheme() {
-		System.out.println(getName() + " theme is applied.");
+		System.out.println(getNombre() + " theme is applied.");
 	}
 }
 
