@@ -56,92 +56,58 @@ public class EstacionType {
     @XmlElement(defaultValue = "10")
     protected int numeroAnclajes;
     @XmlElement(required = true)
-    protected static ArrayList<AnclajesType> anclajes;
+    protected AnclajesType anclajes;
 
     
-    /**
-     * Obtiene el valor de la propiedad id.
-     * 
-     */
+ 
     public int getId() {
         return id;
     }
 
-    /**
-     * Define el valor de la propiedad id.
-     * 
-     */
+
     public void setId(int value) {
         this.id = value;
     }
 
-    /**
-     * Obtiene el valor de la propiedad direccion.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
+
     public String getDireccion() {
         return direccion;
     }
 
-    /**
-     * Define el valor de la propiedad direccion.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
+
     public void setDireccion(String value) {
         this.direccion = value;
     }
 
-    /**
-     * Obtiene el valor de la propiedad numeroAnclajes.
-     * 
-     */
+
     public int getNumeroAnclajes() {
         return numeroAnclajes;
     }
 
-    /**
-     * Define el valor de la propiedad numeroAnclajes.
-     * 
-     */
+
     public void setNumeroAnclajes(int value) {
         this.numeroAnclajes = value;
     }
 
+
+  
+    public AnclajesType getAnclajes() {
+        return anclajes;
+    }
+
     /**
-     * Obtiene el valor de la propiedad anclajes.
+     * Sets the value of the anclajes property.
      * 
-     * @return
-     *     possible object is
-     *     {@link AnclajesType }
+     * @param value
+     *     allowed object is
+     *     {@link Anclajes }
      *     
      */
-  
-    public static ArrayList<AnclajesType> getAnclajes() {
-    	  return anclajes;
-    	 }
-    	 
-    	 //adds a wrapper element around the XML representation
-    	 @XmlElementWrapper(name = "anclajes")
-    	 
-    	 //override the name for the XML element
-    	 @XmlElement(name = "AnclajeType")
-    	 public void setAnclajes(ArrayList<AnclajesType> anclajes) {
-    	  this.anclajes = anclajes;
-    	 }
+    public void setAnclajes(AnclajesType value) {
+        this.anclajes = value;
     
     
-}
-    
-    
-    
+    }}
     
     
     
