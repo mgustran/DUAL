@@ -22,7 +22,7 @@
 
 <xsi:complexType name="anclajesType">
 	<xsi:sequence>
-		<xsi:element name="bicicleta" type="emt:bicicletaType" nillable="true" minOccurs="5" maxOccurs="10" ></xsi:element>
+		<xsi:element name="bicicleta" type="emt:bicicletaType" nillable="true" maxOccurs="unbounded" ></xsi:element>
 		
 	</xsi:sequence>
 </xsi:complexType>
@@ -46,13 +46,9 @@
 </xsi:simpleType>
 
 <xsi:simpleType name='bicicletaType' >
-  <xsi:restriction base='xsi:string' >
-   <xsi:enumeration value='250' />
-   <xsi:enumeration value='null' />
-   <xsi:enumeration value='270' />
-   <xsi:enumeration value='null' />
-   <xsi:enumeration value='290' />
-  </xsi:restriction>
+  <xsi:restriction base="xsi:string">
+      		<xsi:pattern value="[0-9]{3}|null"/>
+   		</xsi:restriction>
 </xsi:simpleType>
 
 

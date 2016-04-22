@@ -4,7 +4,7 @@
 			  xsi:schemaLocation="https://api.mobipalma.mobi/docs/ estacion.xsd ">
   <id>1</id>
   <direccion>Manacor 50</direccion>
-  <numeroAnclajes>10</numeroAnclajes>
+  <numeroAnclajes>5</numeroAnclajes>
   <anclajes>
     <bicicleta>250</bicicleta>
     <bicicleta>270</bicicleta>
