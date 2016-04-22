@@ -17,8 +17,9 @@ public class main {
 			System.out.println("DirecciÛn --> " + menuElement.getValue().getDireccion());
 			System.out.println("Numero de Anclajes -->  " + menuElement.getValue().getNumeroAnclajes());
 			
-			System.out.println("Bicis y anclajes:");
-			consultarAnclajes(menuElement);
+			System.out.println("Anclajes:");
+			System.out.println("\n");
+			desplegarAnclajes(menuElement);
 		
 	      
 			
@@ -27,26 +28,20 @@ public class main {
 		}}
 	
 		
-		public static void consultarAnclajes(JAXBElement<EstacionType> menuElement){
-			// recorre el array anclajes y muestra el id de la bici anclada o si est√° libre
-			
-			// la clase Bicicleta no es creada por JAXB porque he declarado el tipo del elemento bicicleta
-			// como simpleContent restriction de un string en el Schema.
-			// La clase Anclajes es un List<String> bicicleta
-		
-			int posicion = 0;
-			int numeroAnclaje = 0;
+		public static void desplegarAnclajes(JAXBElement<EstacionType> menuElement){
+			int i = 0;
+			int numAnclaje = 0;
 			
 			for(String bicicleta:(menuElement.getValue().getAnclajes()).getBicicleta() ){
-				numeroAnclaje = posicion + 1;
-				//System.out.println(bicicleta);
-				if( bicicleta.matches("[0-9]{3}") ){
-					System.out.println("Anclaje " + numeroAnclaje + " : " + bicicleta);
+				numAnclaje = i + 1;
+				if( bicicleta.matches("null") ){
+					System.out.println("Anclaje " + numAnclaje + " : " + " libre");
+					
 				}
 				else
-					System.out.println("Anclaje " + numeroAnclaje + " : " + " libre");
+					System.out.println("Anclaje " + numAnclaje + " : " + bicicleta);
 				
-				posicion++;	
+				i++;	
 			}
 		}
 	}

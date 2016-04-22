@@ -32,7 +32,8 @@
 
 <xsi:simpleType name="idType">
 	<xsi:restriction base="xsi:int">
-	</xsi:restriction>
+      	<xsi:pattern value="[0-9]{1}|[0-9]{2}"/>
+   	</xsi:restriction>
 </xsi:simpleType>
 
 <xsi:simpleType name="direccionType">
@@ -42,13 +43,14 @@
 
 <xsi:simpleType name="numeroAnclajesType">
 	<xsi:restriction base="xsi:int">
-	</xsi:restriction>
+      	<xsi:pattern value="[0-9]{1}|[0-9]{2}"/>
+   	</xsi:restriction>
 </xsi:simpleType>
 
 <xsi:simpleType name='bicicletaType' >
-  <xsi:restriction base="xsi:string">
-      		<xsi:pattern value="[0-9]{3}|null"/>
-   		</xsi:restriction>
+	<xsi:restriction base="xsi:string">
+      	<xsi:pattern value="[0-9]{3}|null"/>
+   	</xsi:restriction>
 </xsi:simpleType>
 
 

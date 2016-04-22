@@ -2,9 +2,9 @@
 <emt:estacion xmlns:emt="https://api.mobipalma.mobi/docs/" 
 			  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 			  xsi:schemaLocation="https://api.mobipalma.mobi/docs/ estacion.xsd ">
-  <id>1</id>
+  <id>15</id>
   <direccion>Manacor 50</direccion>
-  <numeroAnclajes>5</numeroAnclajes>
+  <numeroAnclajes>15</numeroAnclajes>
   <anclajes>
     <bicicleta>250</bicicleta>
     <bicicleta>270</bicicleta>
