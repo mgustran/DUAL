@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="https://api.mobipalma.mobi/docs/" 
+		xmlns:emt="https://api.mobipalma.mobi/docs/"
+		elementFormDefault="unqualified">
+
+
+
+<!-- Aqui definimos el elemento global -->
+<xsi:element name="estacion" type="emt:estacionType"></xsi:element>
+
+<!-- Aqui definimos el tipo complejo -->
+<xsi:complexType name="estacionType">
+	<xsi:sequence>
+		<xsi:element name="id" type="emt:idType" default='1'></xsi:element>
+		<xsi:element name="direccion" type="emt:direccionType" default="Manacor 50" ></xsi:element>
+		<xsi:element name="numeroAnclajes" type="emt:numeroAnclajesType" default="10"></xsi:element>
+		<xsi:element name="anclajes" type="emt:anclajesType"></xsi:element>
+	</xsi:sequence>
+</xsi:complexType>
+
+
+<xsi:complexType name="anclajesType">
+	<xsi:sequence>
+		<xsi:element name="bicicleta" type="emt:bicicletaType" nillable="true" maxOccurs="unbounded" ></xsi:element>
+		
+	</xsi:sequence>
+</xsi:complexType>
+	
+
+<!-- Aqui definimos los tipos simples -->
+
+<xsi:simpleType name="idType">
+	<xsi:restriction base="xsi:int">
+      	<xsi:pattern value="[0-9]{1}|[0-9]{2}"/>
+   	</xsi:restriction>
+</xsi:simpleType>
+
+<xsi:simpleType name="direccionType">
+	<xsi:restriction base="xsi:string">
+	</xsi:restriction>
+</xsi:simpleType>
+
+<xsi:simpleType name="numeroAnclajesType">
+	<xsi:restriction base="xsi:int">
+      	<xsi:pattern value="[0-9]{1}|[0-9]{2}"/>
+   	</xsi:restriction>
+</xsi:simpleType>
+
+<xsi:simpleType name='bicicletaType' >
+	<xsi:restriction base="xsi:string">
+      	<xsi:pattern value="[0-9]{3}|null"/>
+   	</xsi:restriction>
+</xsi:simpleType>
+
+
+</xsi:schema>
