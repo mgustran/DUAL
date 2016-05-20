@@ -6,7 +6,11 @@
 # x2 + x = 0         x = -1 x = 0              a = 1, b = 1, c = 0
 # x2 + x + 1 = 0     la ecuación no tiene solución real  a = 1, b = 1, c = 1
 # x2 + 1 = 0         la ecuación no tiene solución real  a = 1, b = 0, c = 1
-# x + 1 = 0          x = -1              a = 0, b = 1, c = 1  
+# x + 1 = 0          x = -1              a = 0, b = 1, c = 1
+
+
+
+######### HAY QUE IMPLEMENTAR LA EQUACION DE PRIMER GRADO #########
 
 
 import math
@@ -37,15 +41,15 @@ def raicesEcuacionSegundoGrado(a, b, c, soluciones):
 def test():
 
     print("Introduce los coeficientes de la ecuacion del modo ax2 + bx +c = 0")
-    a = float(input('a = '))
-    b = float(input('b = '))
-    c = float(input('c = '))
+    a = float(input('a -> '))
+    b = float(input('b -> '))
+    c = float(input('c -> '))
 
     soluciones = []
 
     raicesEcuacionSegundoGrado(a, b, c, soluciones)
 
     for x in soluciones:
-   	    print("x = ", '{:.5f}'.format(x))
+        print("x = ", '{:.2f}'.format(x))
 
 test()
