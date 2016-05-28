@@ -95,6 +95,8 @@ public class EstacionType {
         return anclajes;
     }
 
+
+
     /**
      * Sets the value of the anclajes property.
      * 

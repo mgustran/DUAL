@@ -12,9 +12,9 @@ public class main {
 			final JAXBContext jc = JAXBContext.newInstance(EstacionType.class.getPackage().getName());
 			Unmarshaller u = jc.createUnmarshaller();
 	        @SuppressWarnings("unchecked")
-			final JAXBElement<EstacionType> menuElement = (JAXBElement<EstacionType>)u.unmarshal(main.class.getResourceAsStream("estacion.xml"));
+			final JAXBElement<bicipalma.EstacionType> menuElement = (JAXBElement<bicipalma.EstacionType>)u.unmarshal(main.class.getResourceAsStream("estacion.xml"));
 			System.out.println("ID -->  " + menuElement.getValue().getId());
-			System.out.println("Dirección --> " + menuElement.getValue().getDireccion());
+			System.out.println("Direcciï¿½n --> " + menuElement.getValue().getDireccion());
 			System.out.println("Numero de Anclajes -->  " + menuElement.getValue().getNumeroAnclajes());
 			
 			System.out.println("Anclajes:");
