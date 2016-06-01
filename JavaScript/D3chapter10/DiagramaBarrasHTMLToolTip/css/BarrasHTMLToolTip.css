@@ -1,0 +1,29 @@
+rect:hover {
+    fill: blue;
+}
+
+#tooltip {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    padding: 5px;
+    background-color: lightblue;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+#tooltip.hidden {
+    display: none;
+}
+
+#tooltip p {
+    margin: 0;
+    font-family: arial;
+    font-size: 19px;
+    line-height: 23px;
+}
