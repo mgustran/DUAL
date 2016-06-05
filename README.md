@@ -34,6 +34,6 @@
 * [**JavaScript**](https://github.com/mgustran/DUAL/tree/master/JavaScript)
  * Ejercicios con SVG y D3
  * Ejercicios con trasnitions, updates, y motions
- * [Ejercicios del Libro Interactive Data Visualization for the Web, Scott Murray](http://codepen.io/mgustran/collections/popular/)
+ * <a href="http://codepen.io/mgustran/collections/popular/" target="_blank">Ejercicios del Libro Interactive Data Visualization for the Web, Scott Murray</a>
  
 
