@@ -7,7 +7,9 @@
 * [**Programación en Java**](https://github.com/mgustran/DUAL/tree/master/ProgramacionJava)
  * Programación Estructurada
  * Programación Orientada a Objetos "POO".
- * Java 8 Y Eclipse Mars
+ * Programacion Dirigida por Eventos
+ * Swing
+ * Java 7,8 con Eclipse Mars o IDEA Community
  + Uso de principios *SOLID*
 
   
@@ -25,4 +27,13 @@
  * Uso de CSS3
 
 * [**Java y XML**](https://github.com/mgustran/DUAL/tree/master/JavaXML)
- * Aun en la iniciación
+ * Ejercicios sobre Schemas (Include, Import y Tipo Derivado Complejo)
+ * Ejercicios basicos de aprendizaje
+ 
+
+* [**JavaScript**](https://github.com/mgustran/DUAL/tree/master/JavaScript)
+ * Ejercicios con SVG y D3
+ * Ejercicios con trasnitions, updates, y motions
+ * Ejercicios del Libro Interactive Data Visualization for the Web, Scott Murray
+ 
+
