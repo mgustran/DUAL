@@ -1,0 +1,52 @@
+
+
+body { margin: 0px; padding: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+
+h3 { margin-left: 22px; margin-top: 20px; border-bottom: 1px dashed rgb(0, 0, 0); }
+h3 span { display: none; }
+h4 {font-size: 30px; font-weight: bolder; color: red;}
+
+p { font: 13px Arial,Helvetica,sans-serif; color: rgb(0, 0, 0); padding-left: 22px; padding-right: 10px; }
+
+a { font: 13px Arial,Helvetica,sans-serif; color: rgb(0, 85, 0); text-decoration: underline; }
+a:visited { color: rgb(0, 51, 153); text-decoration: underline; }
+a:hover { color: rgb(0, 204, 0); text-decoration: underline; }
+
+acronym { font-weight: bold; color: rgb(0, 0, 0); border-bottom: 1px dashed rgb(0, 0, 0); cursor: help; }
+acronym:hover { color: rgb(0, 85, 0); }
+
+li { padding-left: 5px; margin-left: 10px; padding-bottom: 1em; font: 13px Arial,Helvetica,sans-serif; list-style-image: url(../images/listimage.gif); }
+
+#container { width: 675px; margin: 0px; padding: 0px; background: url(../images/container_bg.gif) no-repeat scroll transparent; text-align: left; float: right; }
+
+#intro { width: 500px; margin: 0px; padding: 0px; float: right; }
+
+#pageHeader { width: 300px; height: 195px; margin: 0px; padding: 0px; background: url(../images/header.gif) no-repeat scroll 0px 0px transparent; float: right; }
+#pageHeader h1, h2 { margin-top: 0px; }
+#pageHeader h1 span, h2 span { display: none; }
+
+#quickSummary { width: 200px; height: 500px; margin: 0px; padding: 0px; background: url(../images/summary_bg.gif) no-repeat scroll 0px 0px transparent; float: right; }
+#quickSummary .p1 span { display: none; }
+#quickSummary .p1 { margin: 0px; padding: 0px; }
+#quickSummary .p2 { margin: 0px; padding: 290px 20px 0px 50px; text-align: right; float: right;}
+
+#preamble { position: absolute; right: 0px; top: 195px; width: 300px; height: 345px; margin: 0px; padding: 0px; background: url(../images/intro_bg.gif) no-repeat scroll 0px 0px rgb(197, 247, 165); }
+#preamble h3 { height: 24px; background: url(../images/road.gif) no-repeat scroll 0px 0px transparent; margin-top: 38px; }
+
+#supportingText { width: 300px; margin: 0; padding: 0; background: none repeat scroll 0 0 rgb(197, 247, 165); float: right;}
+
+#explanation h3 { height: 24px; background: url(../images/about.gif) no-repeat scroll 0px 0px transparent; }
+#participation h3 { height: 24px; background: url(../images/participation.gif) no-repeat scroll 0px 0px transparent; }
+#benefits h3 { height: 24px; background: url(../images/benefits.gif) no-repeat scroll 0px 0px transparent; }
+#requirements h3 { height: 24px; background: url(../images/requirements.gif) no-repeat scroll 0px 0px transparent; }
+
+#footer { padding-top: 8px; padding-right: 20px; margin-top: 50px; margin-bottom: 10px; background: url('../images/footer.gif') no-repeat scroll 0px 0px transparent; text-align: right; width: 259px; height: 22px; float: right; }
+#footer a { font: 13px Arial,Helvetica,sans-serif; color: rgb(0, 204, 0); text-decoration: none; }
+#footer a:hover { color: rgb(0, 85, 0); text-decoration: none; }
+
+#linkList { top: 418px; width: 200px; margin-left: 175px; padding: 0px; background: url(../images/link_bg.gif) no-repeat scroll 0px 100% rgb(165, 219, 165); float: right;  }
+#lselect h3 { height: 24px; background: url(../images/select.gif) no-repeat scroll 0px 0px transparent; }
+#lselect li { padding-bottom: 0.25em; }
+#lselect a.c { font: 11px Arial,Helvetica,sans-serif; display: block; }
+#larchives h3 { height: 24px; background: url(../images/archives.gif) no-repeat scroll 0px 0px transparent; }
+#lresources h3 { height: 24px; background: url(../images/resources.gif) no-repeat scroll 0px 0px transparent; }
