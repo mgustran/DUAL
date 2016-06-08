@@ -2,7 +2,7 @@
   
 ## Repositorio de Actividades del GS de DAW-DUAL
 
-### Aqui se encuentran los ejercicios que hemos ido haciendo durante el Grado Superior en Desarrollo de Aplicaciones Web 
+### Aqui se encuentran los ejercicios que hemos ido haciendo durante el Grado Superior en Desarrollo de Aplicaciones Web** 
 
 * [**Programación en Java**](https://github.com/mgustran/DUAL/tree/master/ProgramacionJava)
  * Programación Estructurada
@@ -37,3 +37,10 @@
  * <a href="http://codepen.io/mgustran/collections/popular/" target="_blank">Ejercicios del Libro Interactive Data Visualization for the Web, Scott Murray</a>
  
 
+
+<br/>
+
+
+
+
+** Los ejercicios o proyectos que no estan directamente relacionados con el curso DUAL se encuentran aqui [GitHub Java-WS](https://github.com/mgustran/Java-WS)
