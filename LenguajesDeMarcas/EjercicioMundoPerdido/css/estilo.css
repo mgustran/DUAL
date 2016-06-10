@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Bebasneue';
+    src: url(../font/bebasneue-webfont.woff) format('woff'),
+    url(../font/bebasneue-webfont.eot) format('embedded-opentype'),
+    url(../font/bebasneue-webfont.ttf) format('truetype'),
+    url(../font/bebasneue-webfont.svg) format('svg');
+
+}
+@font-face {
+    font-family: nsm;
+    src: url(../font/ns-m2xqyezatqh7ai59hjuyutaaiffn5gtwtrycmbq4.woff);
+}
+
+
+h1{
+    font-family: 'Bebasneue', serif;
+    font-size: 40px;
+    line-height: normal;
+    color: #2F4F5F;
+}
+h1>span {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+h1#cuerpo{
+    width: 35%;
+    float: left;
+    margin: 1em 7em 1em 0;
+}
+
+header{
+    width: 1300px;
+}
+header h2{
+    margin-left: 30px;
+    font-size: small;
+    font-family: Verdana, sans-serif;
+    text-transform: uppercase;
+    color: #2F4F4F;
+}
+header ul{
+    bottom: 80px;
+    padding-bottom: 10px;
+    margin-top: -50px;
+    margin-left: 700px;
+    display: block;
+    list-style-type: none;
+}
+header ul li{
+    margin-left: 50px;
+    display: inline;
+    font-size: small;
+    font-family: Verdana, sans-serif;
+}
+header ul li a  {
+    font-size: small;
+    font-family: Verdana, sans-serif;
+    color: #6495ED;
+    text-decoration:none;
+}
+header ul li a:hover{
+    font-size: small;
+    font-family: Verdana, sans-serif;
+    text-decoration:none;
+    color:black;
+}
+#navegador {
+    float: left;
+    width: 100%;
+}
+
+body {
+    font-family: Verdana, serif;
+    font-size: 14px;
+    color: #2F4F4F;
+}
+
+
+
+.cuerpo p a{
+    text-decoration:none;
+    color: #2F4F4F
+}
+.cuerpo p a:hover{
+    border-bottom: 1px dashed;
+    color: #6495ED
+}
+
+#txtHeader {
+    background: url(../images/img-banner.png) no-repeat;
+    clear: both;
+    height: 320px;
+    width: 1300px;
+    margin: 15px;
+}
+.title {
+    position: relative;
+    bottom: -200px;
+    margin:0 0 0 900px;
+    padding: 1px;
+    width: 400px;
+    background-color: rgba(0,0,0,.55);
+    color: white;
+    text-align: center;
+}
+#txtHeader h2>span {
+    font-size: 15px;
+}
+
+section {
+    float: left;
+    width: 820px;
+}
+.contenedor {
+    width: 1300px;
+    height: 1000px;
+    margin: auto;
+    background-image: url(../images/bg.png);
+}
+section img {
+    width: 820px;
+}
+
+/* Barra lateral de navegación */
+aside {
+    float: left;
+    margin:10px 0 40px 80px;
+    width: 280px;
+    padding:0 40px 60px 40px;
+    background: #f5f5f5;
+    border: solid #D3D3D3;
+    box-shadow: 6px 6px 5px #666;
+}
+aside ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+aside ul li {
+    text-align: center;
+    text-decoration:none;
+}
+aside ul li a {
+    display: block;
+    padding: .5em;
+    margin: 2px;
+    background-color: #D3D3D3;
+    text-align: left;
+    text-decoration:none;
+    color: #6495ED;
+    font-size: 110%;
+}
+aside ul a:hover{
+    text-decoration:none;
+    color:white;
+    background-color: #6495ED;
+}
+div#colaboradores ul li:nth-of-type(1){
+    list-style-image: url(../images/img-jason.jpeg);
+}
+div#colaboradores ul li:nth-of-type(2){
+    list-style-image: url(../images/img-nick.jpeg);
+}
+div#colaboradores ul li:nth-of-type(3){
+    list-style-image: url(../images/img-tim.jpeg);
+}
+div#colaboradores ul li:nth-of-type(4){
+    list-style-image: url(../images/img-drew.png);
+}
+div#colaboradores ul li:nth-of-type(5){
+    list-style-image: url(../images/img-justin.jpeg);
+}
+aside>h3 {
+    text-align: center;
+}
+
+/* footer */
+footer{
+    float: left;
+    padding: 5px 180px 5px 180px;
+    background-color: #6495ED;
+    border-radius: .5em;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+footer ul li {
+    float: left;
+    display: inline;
+}
+
+footer ul li a {
+    margin: 0 50px 0 50px;
+    padding: .5em;
+    display: block;
+    border-radius: .5em;
+    text-decoration:none;
+    color:white;
+    font-family: Verdana, sans-serif;
+}
+footer ul a:hover {
+    color: #6495ED;
+    background-color: white;
+}
