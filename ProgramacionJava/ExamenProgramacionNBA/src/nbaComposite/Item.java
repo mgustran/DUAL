@@ -56,7 +56,9 @@ public class Item implements Componible , Iterable  {
     public void anadir(Item equipo){
         if (equipo.isCompuesto()){
             hijos.add(equipo);
-        }else{}
+        }else{
+            //System.out.println("Esto no es un Objeto Complejo");
+        }
         ;
 
 }
@@ -66,6 +68,7 @@ public class Item implements Componible , Iterable  {
         if (isCompuesto()){
         hijos.remove(item);}
         else {
+            //System.out.println("Esto no es un Objeto Simple");
 
         }
 
