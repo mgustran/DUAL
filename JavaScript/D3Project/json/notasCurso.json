@@ -1,0 +1,741 @@
+{
+  "name": "DUAL",
+  "size":8000,
+  "mark":5,
+  "children": [
+
+
+
+
+
+    {
+      "name": "Sistemas Informaticos", "size":6000, "mark":8,
+      "children": [
+        {
+          "name": "Introduccion",
+          "size": 4000,
+          "mark": 4,
+          "children": [
+            {
+              "name": "HardWare",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "SoftWare",
+              "size": 3000,
+              "mark": 0
+            },
+            {
+              "name": "OS",
+              "size": 3000,
+              "mark": 6
+            }
+          ]
+        },
+        {
+          "name": "Redes",
+          "size": 4000,
+          "mark": 0,
+          "children": [
+            {
+              "name": "Redes por Cable",
+              "size": 3000,
+              "mark": 0
+            },
+            {
+              "name": "Redes Inalambricas",
+              "size": 3000,
+              "mark": 0
+            },
+            {
+              "name": "Subnetting",
+              "size": 3000,
+              "mark": 0
+            },
+            {
+              "name": "IP",
+              "size": 3000,
+              "mark": 0
+            },
+            {
+              "name": "Mascaras",
+              "size": 3000,
+              "mark": 3
+            }
+          ]
+        },
+        {
+          "name": "Virtualizacion",
+          "size": 4000,
+          "mark": 8,
+          "children": [
+            {
+              "name": "Introduccion",
+              "size": 3000,
+              "mark": 7
+            },
+            {
+              "name": "Imagenes ISO",
+              "size": 3000,
+              "mark": 8
+            },
+            {
+              "name": "VirtualBox",
+              "size": 3000,
+              "mark": 8
+            },
+            {
+              "name": "VirtualBox Guest Additions",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "Carpetas Compartidas",
+              "size": 3000,
+              "mark": 7
+            }
+          ]
+        },
+        {
+          "name": "SoftWare Libre y Linux",
+          "size": 4000,
+          "mark": 8,
+          "children": [
+            {
+              "name": "SoftWare Libre y S. Propietario",
+              "size": 3000,
+              "mark": 8
+            },
+            {
+              "name": "SO Libres",
+              "size": 3000,
+              "mark": 7
+            },
+            {
+              "name": "Instalacion Distro Linux",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "Particiones",
+              "size": 3000,
+              "mark": 9
+            }
+          ]
+        },
+        {
+          "name": "Ubuntu",
+          "size": 4000,
+          "mark": 9,
+          "children": [
+            {
+              "name": "Interfaz Grafica",
+              "size": 3000,
+              "mark": 7
+            },
+            {
+              "name": "Actualizaciones",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "Terminal",
+              "size": 3000,
+              "mark": 8
+            },
+            {
+              "name": "Comandos Basicos",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "Comando apt",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "Gestion de Usuarios Y permisos",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "Configuración de Redes",
+              "size": 3000,
+              "mark": 9
+            },
+            {
+              "name": "Configuración de Red Local",
+              "size": 3000,
+              "mark": 9.5
+            }
+          ]
+        },
+        {
+          "name": "Windows",
+          "size": 4000,
+          "mark": 3,
+          "children": [
+            {
+              "name": "Sistemas Propietarios: Windows",
+              "size": 3000,
+              "mark": 4
+            },
+            {
+              "name": "Actividad Voluntaria",
+              "size": 3000,
+              "mark": 0
+            }
+          ]
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "name": "F O L", "size":6000, "mark":4,
+      "children": [
+        {
+          "name": "Derecho Laboral",
+          "size": 4000, "mark":4,
+          "children": [
+            {
+              "name": "Derechos Trabajador",
+              "size": 3000,
+              "mark": 3
+            },
+            {
+              "name": "Deberes Trabajador",
+              "size": 3000,
+              "mark": 6
+            },
+            {
+              "name": "Amparo en la Constitución",
+              "size": 3000,
+              "mark": 2
+            },
+            {
+              "name": "Administración Laboral",
+              "size": 3000,
+              "mark": 10
+            }
+          ]
+        },
+
+
+
+
+        {
+          "name": "Busqueda de Trabajo",
+          "size": 4000, "mark":3,
+          "children": [
+            {
+              "name": "Proyecto Professional",
+              "size": 3000,
+              "mark": 3,
+              "children": [
+                {
+                  "name": "Autoanalisis",
+                  "size": 1500,
+                  "mark": 3
+                },
+                {
+                  "name":"Analisis del Mercado Laboral Estatal",
+                  "size":1500,
+                  "mark": 8
+                },
+                {
+                  "name":"Analisis del Mercado Laboral Europeo",
+                  "size":1500,
+                  "mark":0
+                }
+                ]
+
+            },
+
+            {
+              "name": "Definición del Objetivo",
+              "size": 3000,
+              "mark": 2
+            },
+            {
+              "name": "Ofertas de Trabajo",
+              "size": 3000,
+              "mark": 0
+            },
+            {
+              "name": "Curriculum Vitae",
+              "size": 3000,
+              "mark": 9
+            }
+          ]
+        },
+
+
+
+
+        {
+          "name": "Dentro de la Empresa",
+          "size": 4000, "mark":4,
+          "children": [
+            {
+              "name": "Condiciones Laborales",
+              "size": 3000,
+              "mark": 7
+            },
+            {
+              "name": "Horas Extraordinarias",
+              "size": 3000,
+              "mark": 0
+            },
+            {
+              "name": "Contrato Laboral",
+              "size": 3000,
+              "mark": 4
+            },
+            {
+              "name": "Modalidades Contrato",
+              "size": 3000,
+              "mark": 5
+            },
+            {
+              "name": "Proyecto Contrato",
+              "size": 3000,
+              "mark": 2
+            }
+          ]
+        },
+        {
+          "name": "Salud Laboral",
+          "size": 4000, "mark":7,
+          "children": [
+            {
+              "name": "Prevención de Riesgos",
+              "size": 3000,
+              "mark": 8
+            },
+            {
+              "name": "Pantallas de Visualización",
+              "size": 3000,
+              "mark": 7
+            },
+            {
+              "name": "Guia Tecnica PRL con Pantallas",
+              "size": 3000,
+              "mark": 7
+            },
+            {
+              "name": "Guia PRL Oficinas y Despachos",
+              "size": 3000,
+              "mark": 8
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "name": "BBDD",
+      "size": 6000, "mark":4,
+      "children": [
+
+
+
+
+
+        {
+          "name": "SQL",
+          "size": 4000, "mark":4,
+          "children": [
+
+
+
+
+            {
+              "name": "Conceptos",
+              "size": 2000,
+              "mark": 7
+            },
+            {
+              "name": "Editores",
+              "size": 2000,
+              "mark": 6
+            },
+            {
+              "name": "Consultas",
+              "size": 2000,
+              "mark": 8
+            },
+            {
+              "name": "Funciones",
+              "size": 2000,
+              "mark": 4
+            },
+            {
+              "name": "SubConsultas",
+              "size": 2000,
+              "mark": 7
+            },
+            {
+              "name": "Clausulas Avanzadas",
+              "size": 2000,
+              "mark": 6
+            },{
+              "name": "Manipulación Datos",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Creación Tablas",
+              "size": 2000,
+              "mark": 6
+            },
+            {
+              "name": "Uso Vistas",
+              "size": 2000,
+              "mark": 5
+            },
+            {
+              "name": "Administración Tablespace",
+              "size": 2000,
+              "mark": 7
+            },
+            {
+              "name": "Administración Seguridad",
+              "size": 2000,
+              "mark": 3
+            }
+          ]
+
+
+
+
+
+        },
+        {
+          "name": "PL-SQL",
+          "size": 4000, "mark":4,
+          "children": [
+
+
+
+
+            {
+              "name": "Introducción",
+              "size": 2000,
+              "mark": 4
+            },
+            {
+              "name": "Fundamentos",
+              "size": 2000,
+              "mark": 5
+            },
+            {
+              "name": "Cursores",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Triggers",
+              "size": 2000,
+              "mark": 3
+            }
+          ]
+        }
+
+      ]
+    },
+
+
+
+
+
+
+
+
+    {
+      "name": "Entornos",
+      "size": 6000, "mark":7,
+      "children": [
+        {
+          "name": "SCRUM",
+          "size": 4000, "mark":3,
+          "children": [
+            {
+              "name": "Roles",
+              "size": 2000,
+              "mark": 2
+            },
+            {
+              "name": "Eventos",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Historias Usuario",
+              "size": 2000,
+              "mark": 4
+            }
+          ]
+        },
+
+
+
+
+
+        {
+          "name": "Debugging",
+          "size": 4000, "mark":4,
+          "children": [
+            {
+              "name": "How Debuggers Work",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Assertions",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Dependencias",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Ciclo Vida Fallos",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Simplificar Fallos",
+              "size": 2000,
+              "mark": 7
+            }
+          ]
+        },
+        {
+          "name": "UML",
+          "size": 4000, "mark":7,
+          "children": [
+            {
+              "name": "Diag. Clases",
+              "size": 2000,
+              "mark": 8
+            },
+            {
+              "name": "Diag. Uso",
+              "size": 2000,
+              "mark": 6
+            }
+          ]
+        },
+
+
+        {
+          "name": "Patrones Diseño",
+          "size": 4000, "mark":7,
+          "children": [
+            {
+              "name": "Facade",
+              "size": 2000,
+              "mark": 6
+            },
+            {
+              "name": "Observer",
+              "size": 2000,
+              "mark": 6
+            },
+            {
+              "name": "Composite",
+              "size": 2000,
+              "mark": 8
+            },
+            {
+              "name": "MVC",
+              "size": 2000,
+              "mark": 8
+            }
+          ]
+        },
+        {
+          "name": "Pair Programming",
+          "size": 4000,
+          "mark": 7
+        },
+        {
+          "name": "Prog. Defensiva",
+          "size": 4000,
+          "mark": 6
+        }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+    {
+      "name": "Programacion",
+      "size": 6000, "mark":5,
+      "children": [
+        {
+          "name": "Python",
+          "size": 4000, "mark":6,
+          "children": [
+            {
+              "name": "Estructurada",
+              "size": 2000,
+              "mark": 6
+            },
+            {
+              "name": "OOP",
+              "size": 2000,
+              "mark": 6
+            },
+            {
+              "name": "Herencia",
+              "size": 2000,
+              "mark": 7
+            }
+          ]
+        },
+
+        {
+          "name": "Java",
+          "size": 4000, "mark":4,
+          "children": [
+            {
+              "name": "Estructurada",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "OOP",
+              "size": 2000,
+              "mark": 4
+            },
+            {
+              "name": "Eventos",
+              "size": 2000,
+              "mark": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "L Marcas",
+      "size": 6000, "mark":4,
+      "children": [
+        {
+          "name": "D3",
+          "size": 4000, "mark":8,
+          "children": [
+            {
+              "name": "Chapter 8",
+              "size": 2000,
+              "mark": 8
+            },
+            {
+              "name": "Chapter 9",
+              "size": 2000,
+              "mark": 8
+            },
+            {
+              "name": "Chapter 10",
+              "size": 2000,
+              "mark": 8
+            },
+            {
+              "name": "Proyecto D3",
+              "size": 2000,
+              "mark": 6
+            }
+          ]
+        },
+        {
+          "name": "HTML",
+          "size": 4000, "mark":4,
+          "children": [
+            {
+              "name": "Tablas",
+              "size": 2000,
+              "mark": 2
+            },
+            {
+              "name": "PseudoClases",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Formularios",
+              "size": 2000,
+              "mark": 8
+            }
+          ]
+        },
+        {
+          "name": "CSS",
+          "size": 4000, "mark":4,
+          "children":[
+
+            {
+            "name": "Flotado",
+            "size": 2000,
+              "mark": 4
+            },
+            {
+            "name": "Posicionamiento",
+            "size": 2000,
+              "mark": 4
+            },
+            {
+            "name": "Reemplazo img",
+            "size": 2000,
+              "mark": 3
+            },
+            {
+            "name": ":Hover",
+            "size": 2000,
+              "mark": 8
+            }
+          ]
+        },
+        {
+          "name": "XML & Shemas",
+          "size": 4000, "mark":4,
+          "children": [
+            {
+              "name": "Include",
+              "size": 2000,
+              "mark": 8
+            },
+            {
+              "name": "Import",
+              "size": 2000,
+              "mark": 2
+            },
+            {
+              "name": "Redefine Type",
+              "size": 2000,
+              "mark": 3
+            },
+            {
+              "name": "Sust. Group",
+              "size": 2000,
+              "mark": 6
+            }
+          ]
+        }
+      ]
+    }
+    ]
+}

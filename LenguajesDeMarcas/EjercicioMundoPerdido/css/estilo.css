@@ -1,14 +1,6 @@
 @font-face {
     font-family: 'Bebasneue';
-    src: url(../font/bebasneue-webfont.woff) format('woff'),
-    url(../font/bebasneue-webfont.eot) format('embedded-opentype'),
-    url(../font/bebasneue-webfont.ttf) format('truetype'),
-    url(../font/bebasneue-webfont.svg) format('svg');
-
-}
-@font-face {
-    font-family: nsm;
-    src: url(../font/ns-m2xqyezatqh7ai59hjuyutaaiffn5gtwtrycmbq4.woff);
+    src: url(../font/bebasneue-webfont.woff) format('woff')
 }
 
 

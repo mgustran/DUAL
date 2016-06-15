@@ -1,0 +1,39 @@
+.node circle {
+    cursor: pointer;
+    fill: #2fff00;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+
+#body{
+    fill: #000000;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ANUDRG__-webfont';
+    src: url('../fonts/ANUDRG__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.node text {
+
+    font-family: "ANUDRG__-webfont";
+    font-size: 16px;
+}
+
+path.link {
+    fill: none;
+    stroke: #4aff40;
+    stroke-width: 3px;
+
+}
+
+#menu-outer{
+    position: absolute;
+}
