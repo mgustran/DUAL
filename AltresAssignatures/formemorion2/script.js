@@ -7,6 +7,7 @@
 function CustomValidation(input) {
     this.invalidities = [];
     this.validityChecks = [];
+    this.inputNumber1 = 0;
 
     //add reference to the input node
     this.inputNode = input;
@@ -96,6 +97,7 @@ var emailValidityChecks = [
 var number1ValidityChecks = [
     {
         isInvalid: function(input) {
+            this.inputNumber1 = input;
             return !input.value.match(/[2-6]/);
         },
         invalidityMessage: 'Ha de ser un nombre enter entre 2 i 6 ambdos inclosos',
@@ -114,6 +116,17 @@ var number2ValidityChecks = [
 ];
 
 
+var numberProductValidityChecks = [
+    {
+        isInvalid: function(input) {
+            return (input * this.inputNumber1 % 2) == 1;
+        },
+        invalidityMessage: 'El product del dos nombres ha de ser un nombre parell',
+        element: document.querySelector('label[for="numberProduct"] .input-requirements li:nth-child(1)')
+    }
+];
+
+
 /* ----------------------------
 
  Setup CustomValidation
@@ -126,6 +139,7 @@ var number2ValidityChecks = [
 var emailInput = document.getElementById('email');
 var numberInput = document.getElementById('number1');
 var number2Input = document.getElementById('number2');
+var numberProduct = document.getElementById('numberProduct');
 
 emailInput.CustomValidation = new CustomValidation(emailInput);
 emailInput.CustomValidation.validityChecks = emailValidityChecks;
@@ -136,6 +150,8 @@ numberInput.CustomValidation.validityChecks = number1ValidityChecks;
 number2Input.CustomValidation = new CustomValidation(number2Input);
 number2Input.CustomValidation.validityChecks = number2ValidityChecks;
 
+numberProduct.CustomValidation = new CustomValidation(numberProduct);
+numberProduct.CustomValidation.validityChecks = numberProductValidityChecks;
 
 
 

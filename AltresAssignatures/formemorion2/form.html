@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Validació de Formulari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+    <form class="registration" id="registration">
+        <h1>El memorion de tu vida</h1>
+
+        <label for="email">
+            <span>email</span>
+            <input type="text" id="email" minlength="3" required>
+            <ul class="input-requirements">
+                <li>it must be an email with an email format (aaaa@bbbb.cc)</li>
+            </ul>
+        </label>
+
+        <label for="number1">
+            <span>number</span>
+            <input type="number" id="number1" max="9" min="0" required>
+            <ul class="input-requirements">
+                <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
+            </ul>
+        </label>
+
+        <label for="number2">
+            <span>number 2</span>
+            <input type="number" id="number2" max="9" min="0" required>
+            <ul class="input-requirements">
+                <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
+
+            </ul>
+        </label>
+
+        <label for="numberProduct">
+            <span>number 2</span>
+            <input type="number" id="numberProduct" max="50" min="0" required>
+            <ul class="input-requirements">
+                <li>El product del dos nombres ha de ser un nombre parell</li>
+
+            </ul>
+        </label>
+
+        <br>
+        <input type="submit">
+    </form>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
