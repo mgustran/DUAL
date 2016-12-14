@@ -7,6 +7,9 @@
 function CustomValidation(input) {
     this.invalidities = [];
     this.validityChecks = [];
+    // this.number1input = input;
+    // this.producTemp = 0;
+
 
     //add reference to the input node
     this.inputNode = input;
@@ -96,6 +99,7 @@ var emailValidityChecks = [
 var number1ValidityChecks = [
     {
         isInvalid: function(input) {
+            // this.number1input = input;
             return !input.value.match(/[2-6]/);
         },
         invalidityMessage: 'Ha de ser un nombre enter entre 2 i 6 ambdos inclosos',
@@ -111,9 +115,23 @@ var number2ValidityChecks = [
         invalidityMessage: 'Ha de ser un nombre enter entre 2 i 6 ambdos inclosos',
         element: document.querySelector('label[for="number2"] .input-requirements li:nth-child(1)')
     }
+    // {
+    //     isInvalid: function(input) {
+    //         // return ((input * this.number1input) % 2) == 1;
+    //         // return !input.value.match(/[4|6|8|10|12|14|16|18|20|22|24|26|28|30|32|34|36]/);
+    //         this.producTemp = input.value * this.number1input.value;
+    //         return !this.producTemp.toString().match(/4|6|8|10|12|14|16|18|20|22|24|26|28|30|32|34|36/);
+    //
+    //     },
+    //     invalidityMessage: 'El producte dels dos nombres ha de ser parell',
+    //     element: document.querySelector('label[for="number2"] .input-requirements li:nth-child(2)')
+    // }
 ];
 
 
+
+
+//El producte dels dos nombres ha de ser parell
 /* ----------------------------
 
  Setup CustomValidation
@@ -153,6 +171,14 @@ function validate() {
     for (var i = 0; i < inputs.length; i++) {
         inputs[i].CustomValidation.checkInput();
     }
+}
+
+function numbersProduct(){
+    var num1 = document.getElementById("number1").value;
+    var num2 = document.getElementById("number2").value;
+    // var product = Number(num1) * Number(num2);
+    var product = num1 * num2;
+    document.getElementById("numberProducto").innerHTML = product.toString();
 }
 
 submit.addEventListener('click', validate);

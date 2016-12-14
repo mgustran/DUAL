@@ -35,12 +35,14 @@
             <input type="number" id="number2" max="9" min="0" required>
             <ul class="input-requirements">
                 <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
-
+                <li>El producte dels dos nombres ha de ser parell</li>
             </ul>
         </label>
 
         <br>
         <input type="submit">
+        <input type="button" onclick="numbersProduct()">
+        <p>El producte dels dos nombres es:<p id="numberProducto"/></p>
     </form>
 </div>
 <script src="script.js"></script>

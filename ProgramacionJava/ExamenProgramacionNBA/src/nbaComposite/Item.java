@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Dual on 09/06/2016.
  */
-public class Item implements Componible , Iterable  {
+public class Item implements nbaComposite.Componible, Iterable  {
 
     // propiedades
     private String nombre;
