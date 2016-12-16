@@ -163,6 +163,7 @@ function numbersProduct(){
     var num1 = document.getElementById("number1").value;
     var num2 = document.getElementById("number2").value;
     var product = num1 * num2;
+    if (product >= 4 && product <= 36)
     document.getElementById("numberProducto").innerHTML = product.toString();
 }
 

@@ -63,7 +63,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.6;
     font-family: 'Source Sans Pro', serif;
-    background-image: url("../blackWaterWP.jpg");
+    background-image: url("../img/blackWaterWP.jpg");
 }
 
 h1 {
@@ -73,7 +73,7 @@ h1 {
     font-size: 5rem;
     text-transform: uppercase;
     padding: 15px 20px;
-    background-image: url("../dark-metal-texture.jpg");
+    background-image: url("../img/dark-metal-texture.jpg");
     margin-bottom: 0px;
     text-align: center;
     border-top-left-radius: 25px;
@@ -93,7 +93,7 @@ a {
 }
 
 .registration {
-    background-image: url("../metal-form.jpg");
+    background-image: url("../img/metal-form.jpg");
     margin: 0 auto;
     padding-bottom: 20px;
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
@@ -166,7 +166,7 @@ input[type=submit]{
     font-family: "Open Sans";
     text-transform: uppercase;
     color: #403e3e;
-    background: url("../Th606mh2.png") no-repeat scroll 0.5em -0.5em transparent;
+    background: url("../img/Th606mh2.png") no-repeat scroll 0.5em -0.5em transparent;
     background-size: 27px 102px;
     border-radius: 2em;
     border: 0.15em solid #F9C23C;

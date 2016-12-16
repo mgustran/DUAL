@@ -1,0 +1,118 @@
+
+body {
+    background-image: url("../img/blueWaterWP.jpg");
+    font-family: "Courier New", Courier, monospace;
+    height: 100%;
+    color: #0002ff;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 200;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: 100;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+#seconds, #tens {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 2em;
+}
+
+button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #82d2e5;
+    color: #fff;
+    border: solid 1px #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+}
+
+#container {
+    width: 630px;
+    margin: 10px auto;
+}
+#container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[data-view="fitxa"] {
+    transform: rotateY(180deg);
+    width: 100px;
+    height: 140px;
+    border: solid 1px #d3cece;
+    border-radius: 5px;
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+    background: #f3f3f3 url('../img/Waterdrops_Texture.jpg');
+}
+
+.girat {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+.revers {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+.ok {
+    opacity: .5;
+    cursor: default;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+
+/* Icons */
+.ok[data-item="sass"],
+.girat[data-item="sass"] {
+    background: url("../img/sass.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="gulp"],
+.girat[data-item="gulp"] {
+    background: url("../img/gulp.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="grunt"],
+.girat[data-item="grunt"] {
+    background: url("../img/grunt.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="git"],
+.girat[data-item="git"] {
+    background: url("../img/git.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="css3"],
+.girat[data-item="css3"] {
+    background: url("../img/css3.png") left center no-repeat #fff;
+    background-size: contain;
+}
