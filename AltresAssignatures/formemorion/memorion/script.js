@@ -9,6 +9,9 @@ var desenes = 00;
 var afegirDesenes = document.getElementById("tens");
 var afegirSegons = document.getElementById("seconds");
 var Interval ;
+var $number1 = 0;
+var $number2 = 0;
+var $product = 0;
 
 // Seleccionam el contenedor de les fitxes
 var fitxes = document.getElementById('container');
@@ -102,4 +105,24 @@ function startTimer () {
     if (segons > 9){
         afegirSegons.innerHTML = segons;
     }
+
+    function readData( ) {
+        try{
+            var srchString = decodeURI(location.search.substring(1, location.search.length));
+            var number1pos = srchString.search('1=');
+            var number1string = srchString.substring(number1pos+2,number1pos+4);
+            $number1 = parseInt(number1string);
+            var number2pos = srchString.search('2=');
+            var number2string = srchString.substring(number2pos+2);
+            $number2 = parseInt(number2string);
+            if (srchString.length > 0) {
+                $product = $number1 * $number2;
+            }
+        } catch (err) {
+            console.log('ha petat u bloc principal')
+        }
+
+    }
+
+    readData();
 }

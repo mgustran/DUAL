@@ -159,6 +159,11 @@ function validate() {
     }
 }
 
+function goNext(url) {
+    var number1 = document.forms[0].number1.value;
+    location.href = url + "?" + encodeURI(number1);
+}
+
 function numbersProduct(){
     var num1 = document.getElementById("number1").value;
     var num2 = document.getElementById("number2").value;
