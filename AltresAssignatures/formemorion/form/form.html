@@ -11,14 +11,15 @@
 
 <body>
 <div class="container">
+    <h1>El memorion de tu vida</h1>
+
     <form class="registration" id="registration">
-        <h1>El memorion de tu vida</h1>
 
         <label for="email">
             <span>email</span>
             <input type="text" id="email" minlength="3" required>
             <ul class="input-requirements">
-                <li>it must be an email with an email format (aaaa@bbbb.cc)</li>
+                <li>L'email ha de tenir el següent format :  (aaaa@bbbb.cc)</li>
             </ul>
         </label>
 
@@ -35,12 +36,11 @@
             <input type="number" id="number2" max="9" min="0" required>
             <ul class="input-requirements">
                 <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
-                <li>El producte dels dos nombres ha de ser parell</li>
             </ul>
         </label>
 
         <br>
-        <input type="submit">
+        <input type="submit" id="submit" >
         <input type="button" onclick="numbersProduct()">
         <p>El producte dels dos nombres es:<p id="numberProducto"/></p>
     </form>
