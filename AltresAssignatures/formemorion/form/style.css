@@ -130,16 +130,16 @@ input {
 }
 
 #number1 {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 #email {
-    margin-left: 62px;
+    margin-left: 65px;
     margin-top: 30px;
 }
 
 #number2 {
-    margin-left: 23px;
+    margin-left: 65px;
 }
 
 span {
@@ -166,7 +166,7 @@ input[type=submit]{
     font-family: "Open Sans";
     text-transform: uppercase;
     color: #403e3e;
-    background: url("../img/Th606mh2.png") no-repeat scroll 0.5em -0.5em transparent;
+    background: url("../img/COPIATh606mh2.png") no-repeat scroll 0.5em -0.5em transparent;
     background-size: 27px 102px;
     border-radius: 2em;
     border: 0.15em solid #F9C23C;

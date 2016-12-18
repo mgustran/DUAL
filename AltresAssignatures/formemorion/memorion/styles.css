@@ -116,3 +116,85 @@ button {
     background: url("../img/css3.png") left center no-repeat #fff;
     background-size: contain;
 }
+
+.ok[data-item="go"],
+.girat[data-item="go"] {
+    background: url("../img/go.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="angular"],
+.girat[data-item="angular"] {
+    background: url("../img/angular.jpg") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="bootstrap"],
+.girat[data-item="bootstrap"] {
+    background: url("../img/bootstrap.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="bower"],
+.girat[data-item="bower"] {
+    background: url("../img/bower.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="csharp"],
+.girat[data-item="csharp"] {
+    background: url("../img/csharp.jpeg") left center no-repeat #fff;
+    background-size: contain;
+}
+
+
+.ok[data-item="java"],
+.girat[data-item="java"] {
+    background: url("../img/java.png") left center no-repeat #fff;
+    background-size: contain;
+}
+.ok[data-item="mysql"],
+.girat[data-item="mysql"] {
+    background: url("../img/mysql.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="node"],
+.girat[data-item="node"] {
+    background: url("../img/nodejs_logo.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="oracle"],
+.girat[data-item="oracle"] {
+    background: url("../img/oracle.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="python"],
+.girat[data-item="python"] {
+    background: url("../img/python.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="ruby"],
+.girat[data-item="ruby"] {
+    background: url("../img/ruby.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="tux"],
+.girat[data-item="tux"] {
+    background: url("../img/tux.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+.ok[data-item="windows"],
+.girat[data-item="windows"] {
+    background: url("../img/windows.png") left center no-repeat #fff;
+    background-size: contain;
+}
+
+
+
+

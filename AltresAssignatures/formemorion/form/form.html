@@ -17,14 +17,14 @@
 
         <label for="email">
             <span>email</span>
-            <input type="text" id="email" minlength="3" required>
+            <input type="text" name="email" id="email" minlength="3" required>
             <ul class="input-requirements">
                 <li>L'email ha de tenir el següent format :  (aaaa@bbbb.cc)</li>
             </ul>
         </label>
 
         <label for="number1">
-            <span>number</span>
+            <span>Columnes</span>
             <input type="number" id="number1" name="number1" max="9" min="0" required>
             <ul class="input-requirements">
                 <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
@@ -32,17 +32,16 @@
         </label>
 
         <label for="number2">
-            <span>number 2</span>
+            <span>Files</span>
             <input type="number" id="number2" name="number2" max="9" min="0" required>
             <ul class="input-requirements">
                 <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
+                <li>El producte de files i columnes ha de ser parell</li>
             </ul>
         </label>
 
         <br>
         <input type="submit" id="submit" >
-        <input type="button" onclick="numbersProduct()">
-        <p>El producte dels dos nombres es:<p id="numberProducto"/></p>
     </form>
 </div>
 <script src="script.js"></script>

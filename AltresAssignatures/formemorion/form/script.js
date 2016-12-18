@@ -2,67 +2,70 @@
  * Created by mgustran on 2/12/16.
  */
 
+var $producte = 0;
+var $columnes = 0;
+var $files = 0;
 
 
-function CustomValidation(input) {
-    this.invalidities = [];
-    this.validityChecks = [];
+function ValidacioPersonal(input) {
+    this.invalidacions = [];
+    this.validacions = [];
 
 
-    //add reference to the input node
-    this.inputNode = input;
+    // Afegim una referencia al node de l'input
+    this.nodeInput = input;
 
-    //trigger method to attach the listener
-    this.registerListener();
+    //  Disparador per a enregistrar el listener
+    this.enregistrarListener();
 }
 
-CustomValidation.prototype = {
-    addInvalidity: function(message) {
-        this.invalidities.push(message);
+ValidacioPersonal.prototype = {
+    afegirInvalideses: function(message) {
+        this.invalidacions.push(message);
     },
-    getInvalidities: function() {
-        return this.invalidities.join('. \n');
+    recollirInvalideses: function() {
+        return this.invalidacions.join('. \n');
     },
-    checkValidity: function(input) {
-        for ( var i = 0; i < this.validityChecks.length; i++ ) {
+    confirmarValidacio: function(input) {
+        for (var i = 0; i < this.validacions.length; i++ ) {
 
-            var isInvalid = this.validityChecks[i].isInvalid(input);
-            if (isInvalid) {
-                this.addInvalidity(this.validityChecks[i].invalidityMessage);
+            var esInvalid = this.validacions[i].esInvalid(input);
+            if (esInvalid) {
+                this.afegirInvalideses(this.validacions[i].invalidityMessage);
             }
 
-            var requirementElement = this.validityChecks[i].element;
+            var requeriments = this.validacions[i].element;
 
-            if (requirementElement) {
-                if (isInvalid) {
-                    requirementElement.classList.add('invalid');
-                    requirementElement.classList.remove('valid');
+            if (requeriments) {
+                if (esInvalid) {
+                    requeriments.classList.add('invalid');
+                    requeriments.classList.remove('valid');
                 } else {
-                    requirementElement.classList.remove('invalid');
-                    requirementElement.classList.add('valid');
+                    requeriments.classList.remove('invalid');
+                    requeriments.classList.add('valid');
                 }
 
-            } // end if requirementElement
-        } // end for
-    },
-    checkInput: function() { // checkInput now encapsulated
-
-        this.inputNode.CustomValidation.invalidities = [];
-        this.checkValidity(this.inputNode);
-
-        if ( this.inputNode.CustomValidation.invalidities.length === 0 && this.inputNode.value !== '' ) {
-            this.inputNode.setCustomValidity('');
-        } else {
-            var message = this.inputNode.CustomValidation.getInvalidities();
-            this.inputNode.setCustomValidity(message);
+            }
         }
     },
-    registerListener: function() { //register the listener here
+    validaInput: function() { // Aqui es concentra la funcio de validacio de l'input
 
-        var CustomValidation = this;
+        this.nodeInput.CustomValidation.invalidacions = [];
+        this.confirmarValidacio(this.nodeInput);
 
-        this.inputNode.addEventListener('keyup', function() {
-            CustomValidation.checkInput();
+        if ( this.nodeInput.CustomValidation.invalidacions.length === 0 && this.nodeInput.value !== '' ) {
+            this.nodeInput.setCustomValidity('');
+        } else {
+            var message = this.nodeInput.CustomValidation.recollirInvalideses();
+            this.nodeInput.setCustomValidity(message);
+        }
+    },
+    enregistrarListener: function() { //  Aqui esta la funcio que enregistra el listener
+
+        var ValidacioPersonal = this;
+
+        this.nodeInput.addEventListener('keyup', function() {
+            ValidacioPersonal.validaInput();
         });
 
 
@@ -78,15 +81,15 @@ CustomValidation.prototype = {
 
  The arrays of validity checks for each input
  Comprised of three things
- 1. isInvalid() - the function to determine if the input fulfills a particular requirement
- 2. invalidityMessage - the error message to display if the field is invalid
- 3. element - The element that states the requirement
+ 1. esInvalid() - La funcio determina si l'input pasa els requeriments
+ 2. invalidityMessage - missatge d'error a colorejar tant si es true o false
+ 3. element - l'element que conte el requeriment
 
  ---------------------------- */
 
-var emailValidityChecks = [
+var validacionsEmail = [
     {
-        isInvalid: function(input) {
+        esInvalid: function(input) {
             return !input.value.match(/^([A-Z|a-z|0-9](\.|_){0,1})+[A-Z|a-z|0-9]\@([A-Z|a-z|0-9])+((\.){0,1}[A-Z|a-z|0-9]){2}\.[a-z]{2,3}$/gm);
         },
         invalidityMessage: "L'email ha de tenir el següent format :  (aaaa@bbbb.cc)",
@@ -94,83 +97,87 @@ var emailValidityChecks = [
     }
 ];
 
-var number1ValidityChecks = [
+var validacionsColumnes = [
     {
-        isInvalid: function(input) {
+        esInvalid: function(input) {
+            $columnes = input.value;
             return !input.value.match(/[2-6]/);
         },
         invalidityMessage: 'Ha de ser un nombre enter entre 2 i 6 ambdos inclosos',
         element: document.querySelector('label[for="number1"] .input-requirements li:nth-child(1)')
+    },
+
+    {
+        esInvalid: function(input) {
+            $producte = $files * input.value;
+            return ($producte % 2 == 1);
+        },
+        invalidityMessage: 'El producte de files i $columnes ha de ser parell',
+        element: document.querySelector('label[for="number2"] .input-requirements li:nth-child(2)')
     }
 ];
 
-var number2ValidityChecks = [
+var validacionsFiles = [
     {
-        isInvalid: function(input) {
+        esInvalid: function(input) {
             return !input.value.match(/[2-6]/);
         },
         invalidityMessage: 'Ha de ser un nombre enter entre 2 i 6 ambdos inclosos',
         element: document.querySelector('label[for="number2"] .input-requirements li:nth-child(1)')
+    },
+
+    {
+        esInvalid: function(input) {
+            $files = input.value;
+            $producte = $columnes * input.value;
+            return ($producte % 2 == 1);
+        },
+        invalidityMessage: 'El producte de files i $columnes ha de ser parell',
+        element: document.querySelector('label[for="number2"] .input-requirements li:nth-child(2)')
     }
 ];
 
 
 
 
-//El producte dels dos nombres ha de ser parell
 /* ----------------------------
 
- Setup CustomValidation
 
- Setup the CustomValidation prototype for each input
- Also sets which array of validity checks to use for that input
-
+ Aqui es configura ValidacioPersonal per a cada input
+Es selecciona l'array corresponent per a la seleccio de validacions
  ---------------------------- */
 
-var emailInput = document.getElementById('email');
-var numberInput = document.getElementById('number1');
-var number2Input = document.getElementById('number2');
+var inputEmail = document.getElementById('email');
+var inputColumnes = document.getElementById('number1');
+var inputFiles = document.getElementById('number2');
 
-emailInput.CustomValidation = new CustomValidation(emailInput);
-emailInput.CustomValidation.validityChecks = emailValidityChecks;
+inputEmail.CustomValidation = new ValidacioPersonal(inputEmail);
+inputEmail.CustomValidation.validacions = validacionsEmail;
 
-numberInput.CustomValidation = new CustomValidation(numberInput);
-numberInput.CustomValidation.validityChecks = number1ValidityChecks;
+inputColumnes.CustomValidation = new ValidacioPersonal(inputColumnes);
+inputColumnes.CustomValidation.validacions = validacionsColumnes;
 
-number2Input.CustomValidation = new CustomValidation(number2Input);
-number2Input.CustomValidation.validityChecks = number2ValidityChecks;
+inputFiles.CustomValidation = new ValidacioPersonal(inputFiles);
+inputFiles.CustomValidation.validacions = validacionsFiles;
 
 
 
 
 /* ----------------------------
 
- Event Listeners
+ Listeners
 
  ---------------------------- */
 
 var inputs = document.querySelectorAll('input:not([type="submit"])');
 var submit = document.querySelector('input[type="submit"');
-var form = document.getElementById('registration');
+var formulari = document.getElementById('registration');
 
 function validate() {
     for (var i = 0; i < inputs.length; i++) {
-        inputs[i].CustomValidation.checkInput();
+        inputs[i].CustomValidation.validaInput();
     }
 }
 
-function goNext(url) {
-    var number1 = document.forms[0].number1.value;
-    location.href = url + "?" + encodeURI(number1);
-}
-
-function numbersProduct(){
-    var num1 = document.getElementById("number1").value;
-    var num2 = document.getElementById("number2").value;
-    var product = num1 * num2;
-    if (product >= 4 && product <= 36)
-    document.getElementById("numberProducto").innerHTML = product.toString();
-}
-
 submit.addEventListener('click', validate);
-form.addEventListener('submit', validate);
+formulari.addEventListener('submit', validate);
