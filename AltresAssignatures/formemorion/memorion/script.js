@@ -46,31 +46,75 @@ var imatgesFull = [
 
 var imatges = [];
 
+
 // Copiam a l'array el nombre de fitxes necessaries segons les files i $columnes especificades
 function copiarImatges() {
     var numFitxes = 18 - ( $producte / 2);
     imatges = imatgesFull.slice(numFitxes );
-
 }
 
-//Executam les funcions que ens permeten la comunicacio amb el formulari i el control sobre
-// les $columnes i files.
-readData();
+//Executam les funcions que ens permeten la comunicacio amb el formulari , el control sobre
+// les columnes i files i el repartiment de les mateixes a la taula html
+llegeixURI();
 copiarImatges();
 controlCss();
 
-var imgCopiades = imatges.slice(0); // Agafa l'array d'imatges y el duplica
-var fitxesFull = imatges.concat(imgCopiades); // Junta les copies
+
+// Agafa l'array d'imatges y el duplica
+var imgCopiades = imatges.slice(0);
+
+// Junta les copies
+var fitxesFull = imatges.concat(imgCopiades);
 
 
-function reparteix(posicio){     // reparteix les fitxes
+// Llegeix les dades enviades des del formulari
+function llegeixURI() {
+    var srchString = decodeURI(location.search.substring(1, location.search.length));
+    var emailPos = srchString.search('l=');
+    var emailEndPos = srchString.search('&n');
+    var emailString = srchString.substring(emailPos + 2, emailEndPos);
+    $email = emailString.replace('%40', '@');
+    var number1pos = srchString.search('1=');
+    var number1string = srchString.substring(number1pos+2,number1pos+4);
+    $columnes = parseInt(number1string);
+    var number2pos = srchString.search('2=');
+    var number2string = srchString.substring(number2pos+2);
+    $files = parseInt(number2string);
+    if (srchString.length > 0) {
+        $producte = $columnes * $files;
+    }
+}
+
+// Executa el contador del temps en  segons
+function disparaContador () {
+    desenes++;
+
+    if(desenes < 9){
+        afegirDesenes.innerHTML = "0" + desenes;
+    }
+    if (desenes > 9){
+        afegirDesenes.innerHTML = desenes;
+
+    }
+    if (desenes > 99) {
+        segons++;
+        afegirSegons.innerHTML = "0" + segons;
+        desenes = 0;
+        afegirDesenes.innerHTML = "0" + 0;
+    }
+    if (segons > 9){
+        afegirSegons.innerHTML = segons;
+    }
+}
+
+// reparteix les fitxes
+function reparteix(posicio){
     for(var j, x, i = posicio.length; i; j = Math.floor(Math.random() * i), x = posicio[--i],   posicio[i] = posicio[j], posicio[j] = x);
     return posicio;
 }
 reparteix(fitxesFull);
 
 //  Aqui es crea el div que contendra les fitxes i reparteix aquestes mateixes dins el div
-
 for (var i = 0; i < fitxesFull.length; i++) {
     fitxa = document.createElement('div');
     fitxa.dataset.item = fitxesFull[i];
@@ -80,15 +124,16 @@ for (var i = 0; i < fitxesFull.length; i++) {
     // Aqui esta el disparador que dona comensament al joc
     fitxa.onclick = function () {
 
+        // Amb aquesta sentencia el subtitol desapareixera en comensar el joc
         document.getElementById("subtitol").style.display= 'none';
 
-//      Destria els emparellats dels que encara no ho estan a l'hora de clickar
+        //  Destria els emparellats dels que encara no ho estan a l'hora de clicar
         if (this.className != 'girat' && this.className != 'ok'){
             this.className = 'girat';
             var resultat = this.dataset.item;
             emparellats.push(resultat);
             clearInterval(Interval);
-            Interval = setInterval(startTimer, 10);
+            Interval = setInterval(disparaContador, 10);
         }
         if (emparellats.length > 1) {
 
@@ -123,52 +168,11 @@ var jocAcabat = function () {
     }
 };
 
-// Executa el contador del temps en  segons
-function startTimer () {
-    desenes++;
 
-    if(desenes < 9){
-        afegirDesenes.innerHTML = "0" + desenes;
-    }
-    if (desenes > 9){
-        afegirDesenes.innerHTML = desenes;
-
-    }
-    if (desenes > 99) {
-        segons++;
-        afegirSegons.innerHTML = "0" + segons;
-        desenes = 0;
-        afegirDesenes.innerHTML = "0" + 0;
-    }
-    if (segons > 9){
-        afegirSegons.innerHTML = segons;
-    }
-
-
-}
-
-
-// Llegeix les dades enviades des del formulari
-function readData( ) {
-    var srchString = decodeURI(location.search.substring(1, location.search.length));
-    var emailPos = srchString.search('l=');
-    var emailEndPos = srchString.search('&n');
-    var emailString = srchString.substring(emailPos + 2, emailEndPos);
-    $email = emailString.replace('%40', '@');
-    var number1pos = srchString.search('1=');
-    var number1string = srchString.substring(number1pos+2,number1pos+4);
-    $columnes = parseInt(number1string);
-    var number2pos = srchString.search('2=');
-    var number2string = srchString.substring(number2pos+2);
-    $files = parseInt(number2string);
-    if (srchString.length > 0) {
-        $producte = $columnes * $files;
-
-    }
-}
-
-
-// Controla el div i les $columnes per colocar les fitxes correctament
+// Controla el div i les columnes per colocar les fitxes correctament
+// ( Canvia l'ample del div per ajustar les columnes, com que l'script
+// fa el calcul sobre el producte del dos nombres per crear les fitxes,
+//  no es necessari canviar res per controlar les files.  )
 function controlCss() {
     switch ($columnes) {
         case 2:
@@ -188,5 +192,3 @@ function controlCss() {
             break;
     }
 }
-
-

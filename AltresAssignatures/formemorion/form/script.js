@@ -67,6 +67,9 @@ ValidacioPersonal.prototype = {
         this.nodeInput.addEventListener('keyup', function() {
             ValidacioPersonal.validaInput();
         });
+        this.nodeInput.addEventListener('click', function() {
+            ValidacioPersonal.validaInput();
+        });
 
 
     }
@@ -79,8 +82,8 @@ ValidacioPersonal.prototype = {
 
  Validity Checks
 
- The arrays of validity checks for each input
- Comprised of three things
+ Son els arrais que comprenen els metode s de validacio
+Contenen 3 elements
  1. esInvalid() - La funcio determina si l'input pasa els requeriments
  2. invalidityMessage - missatge d'error a colorejar tant si es true o false
  3. element - l'element que conte el requeriment
@@ -179,5 +182,6 @@ function validate() {
     }
 }
 
+// Aqui s'escolta el submit, que a l'html s'especifica que es amb el metode GET
 submit.addEventListener('click', validate);
 formulari.addEventListener('submit', validate);

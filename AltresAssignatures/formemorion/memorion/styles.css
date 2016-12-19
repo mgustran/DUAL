@@ -1,4 +1,4 @@
-
+/*Estils sobre el titol, subtitol i contador*/
 body {
     background-image: url("../img/blueWaterWP.jpg");
     font-family: "Courier New", Courier, monospace;
@@ -6,42 +6,24 @@ body {
     color: #0002ff;
     text-align: center;
 }
-
 h1, h2 {
     font-family: "Courier New", Courier, monospace;
     font-weight: 200;
     font-size: 2.6em;
     text-transform: uppercase;
 }
-
 h3 {
     font-family: "Lucida Console", Monaco, monospace;
     font-weight: 100;
     font-size: 1.4em;
     text-transform: uppercase;
 }
-
 #seconds, #tens {
     font-family: "Courier New", Courier, monospace;
     font-size: 2em;
 }
 
-button {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background: #82d2e5;
-    color: #fff;
-    border: solid 1px #fff;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1.2em;
-    padding: 18px 10px;
-    width: 180px;
-    margin: 10px;
-    outline: none;
-}
-
+/*estils base del container*/
 #container {
     width: 630px;
     margin: 10px auto;
@@ -52,6 +34,7 @@ button {
     clear: both;
 }
 
+/*Estils de la fitxa*/
 [data-view="fitxa"] {
     transform: rotateY(180deg);
     width: 100px;
@@ -86,7 +69,7 @@ button {
     transform: rotateY(0deg);
 }
 
-/* Icons */
+/* Logos de llenguatges // imatges emprades a les fitxes */
 .ok[data-item="sass"],
 .girat[data-item="sass"] {
     background: url("../img/sass.png") left center no-repeat #fff;

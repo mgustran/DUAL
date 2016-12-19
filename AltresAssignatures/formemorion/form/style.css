@@ -59,13 +59,14 @@ html {
     font-size: 62.5%;
 }
 
+/*Afegit wallpaper, canvis sobre les fonts*/
 body {
     font-size: 1.6rem;
     line-height: 1.6;
-    font-family: 'Source Sans Pro', serif;
     background-image: url("../img/blackWaterWP.jpg");
 }
 
+/*Afegida textura, fonts i control dels marges*/
 h1 {
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
@@ -92,6 +93,7 @@ a {
     max-width: 800px;
 }
 
+/*Estils del formulari, textura de fons , ombreig i marges*/
 .registration {
     background-image: url("../img/metal-form.jpg");
     margin: 0 auto;
@@ -111,7 +113,7 @@ a {
     color: rgb(0, 0, 0);
 }
 
-
+/*colors de les valideses*/
 .input-requirements li.invalid {
     color: #e7160e;
 }
@@ -125,38 +127,29 @@ a {
     content: "\2713";
 }
 
+/*Marges dels inputs*/
 input {
     margin-right: 40px;
 }
-
 #number1 {
     margin-left: 30px;
 }
-
 #email {
     margin-left: 65px;
     margin-top: 30px;
 }
-
 #number2 {
     margin-left: 65px;
 }
-
 span {
     font-family: "Courier New", Courier, monospace;
     margin-left: 20px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2.2rem;
-
 }
 
-/*#submit {*/
-    /*background-image: ;*/
-    /*width: 200px;*/
-    /*height: 30px;*/
-/*}*/
-
+/*Estils del boto de submit, transicions sobre hover i sobre focus*/
 input[type=submit]{
     margin-left: 0.5em;
     height: 1.5em;
