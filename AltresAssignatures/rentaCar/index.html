@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Validació de Formulari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<div class="container">
+    <h1>Lloguer de cotxes</h1>
+
+    <form class="registration" id="registration" action="../memorion/index.html" method="get">
+
+        <label for="matricula">
+            <span>matricula</span>
+            <input type="text" name="matricula" id="matricula" minlength="10" required>
+            <ul class="input-requirements">
+                <li>La matricula ha de tenir el següent format:  'E-0000-PCB'</li>
+            </ul>
+        </label>
+
+        <label for="marca">
+            <span>marca</span>
+            <select id="marca">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Fiat</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+            <ul class="input-requirements">
+                <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
+            </ul>
+        </label>
+
+        <label for="model">
+            <span>model</span>
+            <select id="model">
+
+            </select>
+            <ul class="input-requirements">
+                <li>Ha de ser un nombre enter entre 2 i 6 ambdos inclosos</li>
+            </ul>
+        </label>
+
+        <br>
+        <input type="submit" id="submit" >
+    </form>
+</div>
+<script src="js/script.js"></script>
+
+</body>
+</html>
