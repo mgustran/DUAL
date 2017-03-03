@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Market</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 		
+	<link rel="stylesheet" href="market.css">
+	<script src="scripts/market.js"></script>
+	<script src="scripts/jquery-1.10.2.js"></script>
+	<script src="scripts/handlebars.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUKMepfA93RIgPL9279ftm-ylaiu_i4tw&sensor=true&language=en"></script>
+	<script id="rental-car-template" type="text/x-handlebars-template">
+		<div id="item{{carID}}" class="item">
+				<b>{{product_name}}</b><br>
+				<img src="{{image_source}}" class='logo'><br>
+			{{#if gear_type}}
+				<b>Gear: <i>Automatical</i></b>
+			{{else}}
+				<b>Gear: <i>Manual</i></b>
+			{{/if}}
+				<div id="plate">
+				{{carID}}
+				</div>
+			{{#if stock}}
+				<button id="buy-btn" class='singup-btn' onclick="buy('{{carID}}','{{gear_type}}','{{product_name}}')">Rent</button>
+			{{else}}
+				<button id="out-btn" class='singup-btn'>Out of Stock</button>
+			{{/if}}
+		</div>
+	</script>
+	<script>
+	$(document).ready(function(){
+
+				var currentYear = (new Date).getFullYear();
+				$('#year').html(currentYear);
+
+
+				if(typeof(Storage)!=="undefined")
+				{
+						if (localStorage.loginState == undefined || localStorage.carsArray == undefined)
+						{
+							localStorage.loginState = 0;
+							localStorage["carsArray"] = JSON.stringify(cars);
+
+						}			
+														
+				}
+				else
+				{
+				  	 alert("Just shame work at John Bryce, whilow browser with localStorage supports!");
+				  	 window.location.href="http://browsehappy.com/?locale=en";
+				}
+				
+				
+			
+		});	
+	$(document).on("mouseover",function(){
+
+			if (localStorage.loginState == 0)
+			{
+				$('#switch_but').text("Sign Up/In");
+			}
+			else
+			{
+				$('#switch_but').text("Exit");
+			}
+
+
+	});
+
+	</script>
+</head>
+<body onload="loadHomePage()">
+	<!-- header -->
+	<header>
+		<div><img id='main-logo' src="pictures/logo.png" alt="Here Logo"></div> 
+		<div id="logo-text">Smart way rent car.</div>
+
+	<nav>
+		<div onclick="loadHomePage()">Home</div>
+		<div onclick="loadCarsPage()">Our Cars</div>
+		<div onclick="loadMapPage()">Path Calculator</div>
+		<div onclick="loadReturnPage()">Return Car</div>
+		<div id="switch_but" onclick="loadLoginPage()">Sign Up/In</div>
+	</nav>
+	</header>
+	<!-- content -->
+	
+	<div id="content">			
+	</div>
+	<!-- footer -->
+	<footer>									
+		&copy; <span id="year"></span> Flight Car Rental ltd. All rights reserved.
+	</footer>
+	<audio id="yonatanSong">
+   <!-- <source src="music/music.ogg" type="audio/ogg"> -->
+   <!--  getOutfrom comment for special song =)  -->
+  	<source src="music/music.mp3" type="audio/mpeg">
+	</audio>
+</body>
+</html>

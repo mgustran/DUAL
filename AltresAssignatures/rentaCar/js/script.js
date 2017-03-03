@@ -1,4 +1,6 @@
 function ValidacioPersonal(input) {
+
+    // this.loadModels = loadModels();
     this.invalidacions = [];
     this.validacions = [];
 
@@ -8,6 +10,13 @@ function ValidacioPersonal(input) {
 
     //  Disparador per a enregistrar el listener
     this.enregistrarListener();
+
+
+
+
+
+
+
 }
 
 ValidacioPersonal.prototype = {
@@ -160,6 +169,4 @@ formulari.addEventListener('submit', validate);
 //     }
 // }
 //
-// function loadModels() {
-//
-// }
+

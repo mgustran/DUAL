@@ -1,0 +1,50 @@
+<!-- SINGUP SINGIN PAGE -->
+
+<div>
+	<div id='sign-content'>
+		<div id="in-form" name='up'>
+					<h1>First time?</h1>
+						<form id="in">
+							Full name:<input  type="text" required><br>
+							Email adress:<input type="email" id="nameInput" required><br>
+							Phone number:<input type="tel" required><br>
+							Date of birth: <input type="date" required><br>
+							Choice password: <input type="password" id="passInput" required><br>
+							<input id="submitInForm" type="submit" value='Be friend!' class='singup-btn' >
+						</form>
+
+		</div>
+		<div id='or'>OR</div>
+			<div id="up-form" >
+				<h1>Sign in.</h1>
+					<form id="up">
+						Email adress:<input type="text" id="upNameImput" required><br>
+						Password:<input type="password" id="upPassInput" required><br>
+						<input type="submit" value='Enter!' class='singup-btn'>
+					</form>
+			</div>
+	</div>
+</div>
+<script>
+							$("#in-form").submit(function(e) // submit user information to localstorage
+									{
+									    e.preventDefault();
+										localStorage.userName = $('#nameInput').val();
+										localStorage.userPass = $('#passInput').val();
+										alert("Thx for regestration! Now you can log with your name and pass!")
+										sesionStorage.userCounter = userCounter;	
+									});
+							$("#up-form").submit(function(e) // check user information for login
+									{
+			    						e.preventDefault();
+										if (localStorage.userName == $('#upNameInput').val() || localStorage.userPass == $('#upPassInput').val())
+										{
+											alert('wellcome to system')
+											localStorage.loginState = 1;
+										}
+										else
+										{
+											alert('wrong password! try again!')
+										}
+			  						});
+</script>

@@ -1,0 +1,17 @@
+<!-- CARS PAGE -->
+<script>
+		$(document).ready(function(){
+			var curentCars = JSON.parse(localStorage["carsArray"]);
+			for(var i=0; i<cars.length; i++)
+			{
+				var html = getTemplate("rental-car-template",  curentCars[i]);
+				$("#products").append(html);	
+			}
+
+		});	
+</script>
+	<div>
+					<div id="products">
+						<h1>Cars:</h1>
+					</div>
+	</div>
