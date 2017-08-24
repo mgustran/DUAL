@@ -669,7 +669,7 @@ function FindProxyForURL(url, host) {
 			    	shExpMatch(url, "*/*https://repo.maven.apache.org*") ||
 			    
 			    	shExpMatch(url, "*/*spotify*") ||
-
+			    
 				shExpMatch(url, "*/127.0.*.*/*"))
         {return "DIRECT";}
 
