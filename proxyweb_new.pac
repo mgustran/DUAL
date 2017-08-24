@@ -665,6 +665,8 @@ function FindProxyForURL(url, host) {
 				shExpMatch(url, "*/172.24.*.*/*") ||
 
 				shExpMatch(url, "*/10.*.*.*/*") ||
+			    
+			    	shExpMatch(url, "*/*https://repo.maven.apache.org/maven2*") ||
 
 				shExpMatch(url, "*/127.0.*.*/*"))
         {return "DIRECT";}
